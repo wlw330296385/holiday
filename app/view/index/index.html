@@ -33,8 +33,11 @@
 						<li>
 							<a href="{:url('index/product')}">生产工艺</a>
 						</li>
+                        <li>
+							<a href="{:url('index/show',['m'=>1])}">主要产品</a>
+						</li>
 						<li>
-							<a href="{:url('index/show')}">产品展示 </a>
+							<a href="{:url('index/show')}">全部产品 </a>
 							<div class="navDown">
 								<a href="{:url('index/show')}">快餐盒系列</a>
 								<a href="javascript:">杯子系列</a>
@@ -374,87 +377,36 @@
 								<a class="homeDzzxMore" href=""></a>
 							</div>
 							<ul class="homeDzzxTList">
+								{volist name = "product_list" id = "vol" length='2'}
 								<li>
 									<a href="">
-										<div class="pic"><img src="/static/frontend/temp/zpc_img7jpg.jpg"/></div>
+										<div class="pic"><img src="/static/frontend/temp/{$vol.image_obj}"/></div>
 									</a>
 									<div class="bg">
 										<div class="bgW">
-											<h3>可爱熊造型（TY）</h3>
+											<h3>{$vol.name}</h3>
 											<a href="">+</a>
 										</div>
 									</div>
 								</li>
-								<li>
-									<a href="">
-										<div class="pic"><img src="/static/frontend/temp/zpc_img8jpg.jpg"/></div>
-									</a>
-									<div class="bg">
-										<div class="bgW">
-											<h3>可爱熊造型（TY）</h3>
-											<a href="">+</a>
-										</div>
-									</div>
-								</li>
+								{/volist}
 							</ul>
 						</div>
 						<div class="left">
 							<ul class="clearfloat">
+								{volist name = "product_list" id = "vol" length='5' offset = "2"}
 								<li>
 									<a href="">
-										<div class="pic"><img src="/static/frontend/temp/zpc_img2jpg.jpg"/></div>
+										<div class="pic"><img src="/static/frontend/temp/{$vol.image_obj}"/></div>
 									</a>
 									<div class="bg">
 										<div class="bgW">
-											<h3>可爱熊造型（TY）</h3>
-											<a href="">+</a>
+											<h3>{$vol.name}</h3>
+											<a href="{:url('index/show_detail')}">+</a>
 										</div>
 									</div>
 								</li>
-								<li>
-									<a href="">
-										<div class="pic"><img src="/static/frontend/temp/zpc_img3jpg.jpg"/></div>
-									</a>
-									<div class="bg">
-										<div class="bgW">
-											<h3>可爱熊造型（TY）</h3>
-											<a href="">+</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="">
-										<div class="pic"><img src="/static/frontend/temp/zpc_img4jpg.jpg"/></div>
-									</a>
-									<div class="bg">
-										<div class="bgW">
-											<h3>可爱熊造型（TY）</h3>
-											<a href="">+</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="">
-										<div class="pic"><img src="/static/frontend/temp/zpc_img5jpg.jpg"/></div>
-									</a>
-									<div class="bg">
-										<div class="bgW">
-											<h3>可爱熊造型（TY）</h3>
-											<a href="">+</a>
-										</div>
-									</div>
-								</li>
-								<li>
-									<a href="">
-										<div class="pic"><img src="/static/frontend/temp/zpc_img6jpg.jpg"/></div>
-									</a>
-									<div class="bg">
-										<div class="bgW">
-											<h3>可爱熊造型（TY）</h3>
-											<a href="">+</a>
-										</div>
-									</div>
-								</li>
+								{/volist}
 							</ul>
 						</div>
 					</div>
@@ -715,7 +667,7 @@
 						<p><a href="">印刷图文</a></p>
 					</li>
 					<li>
-						<h3>产品展示</h3>
+						<h3>全部产品</h3>
 						<p><a href="">单格餐盒</a></p>
 						<p><a href="">双格餐盒</a></p>
 						<p><a href="">三格餐盒</a></p>

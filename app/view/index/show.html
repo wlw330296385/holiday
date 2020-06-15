@@ -6,7 +6,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta content="telephone=no" name="format-detection">  
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-		<title>产品展示</title>
+		<title>全部产品</title>
 		<link rel="stylesheet" type="text/css" href="/static/frontend/css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="/static/frontend/css/jquery.bxslider.css"/>
 		<link rel="stylesheet" type="text/css" href="/static/frontend/css/style.css"/>
@@ -32,8 +32,12 @@
 						<li>
 							<a href="{:url('index/product')}">生产工艺</a>
 						</li>
-						<li class="active" >
-							<a href="{:url('index/show')}">产品展示 </a>
+						<li {if input('m')} class="active" {/if}>
+							<a href="{:url('index/show',['m'=>1])}">主要产品</a>
+						</li>
+						<li {if !input('m')} class="active" {/if}>
+
+							<a href="{:url('index/show')}">全部产品 </a>
 							<div class="navDown">
 								<a href="{:url('index/show')}">快餐盒系列</a>
 								<a href="javascript:">杯子系列</a>
@@ -97,18 +101,21 @@
 				<!--<span class="BtnL"></span>-->
 				<div class="aboutH">
 					<h3>PRODUCT SHOW</h3>
-					<h2>产品展示</h2>
+					<h2>全部产品</h2>
 				</div>
 				<ul class="aboutNav">
-					<li class="on"><a href="javascript:">
-						快餐盒系列 <span class="jtAbout"></span>
-					</a></li>
-					<li><a href="javascript:">
-						杯子系列<span class="jtAbout"></span>
-					</a></li>
-					<li><a href="javascript:">
-						品牌定制案例 <span class="jtAbout"></span>
-					</a></li>
+					<li class="on">
+						<a href="{:url('index/show')}">
+							全部产品 <span class="jtAbout"></span>
+						</a>
+					</li>
+					{volist name = "c_list" id = "vol"}
+					<li>
+						<a href="{:url('index/show',['c' => $vol.id])}">
+							{$vol.name} <span class="jtAbout"></span>
+						</a>
+					</li>
+					{/volist}
 				</ul>
 				<div class="aboutLAd">
 					<a href=""><div class="pic"><img src="/static/frontend/temp/about_l_img.jpg"/></div></a>
@@ -121,22 +128,22 @@
 						<li>
 							<span><img src="/static/frontend/images/about_phone.png"/></span>
 							<em>电话：</em>
-							<p>0755-1234567</p>
+							<p>{$setting.company_phone}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_tel.png"/></span>
 							<em>手机：</em>
-							<p>1855555555</p>
+							<p>{$setting.phone}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_mail.png"/></span>
 							<em>邮箱：</em>
-							<p>holiday@vip.cn</p>
+							<p>{$setting.email}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_position.png"/></span>
 							<em>地址：</em>
-							<p>深圳市XX路XX号XX街道深圳市XX路XX号XX街道</p>
+							<p>{$setting.location}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_weixin.png"/></span>
@@ -147,7 +154,7 @@
 						</li>
 					</ul>
 					<div class="aboutEwm">
-						<img src="/static/frontend/temp/ewm_about.jpg"/>
+						<img src="/static/frontend/images/{$setting.qrcode_obj}"/>
 					</div>
 				</div>
 				
@@ -155,7 +162,7 @@
 			
 			<div class="aboutR">
 				<div class="aboutRTop">
-					<p>您现在的位置：<a href="{:url('index/index')}">首页</a> &gt; 产品展示</p>
+					<p>您现在的位置：<a href="{:url('index/index')}">首页</a> &gt; 全部产品</p>
 				</div>
 				<div class="showW">
 					<ul class="showList clearfloat">
@@ -192,7 +199,7 @@
 						<h3>咨询热线：</h3>
 						<p>0755-1234567</p>
 					</div>
-					<p class="footerCopy">华利达 Copyright © 2018 版权所有浙ICP备：123456号</p>
+					<p class="footerCopy">{$setting.copyright}</p>
 				</div>
 				<div class="left footerEwm">
 					<div class="pic"><img src="/static/frontend/temp/ewm.jpg"/></div>
@@ -210,7 +217,7 @@
 						<p><a href="">印刷图文</a></p>
 					</li>
 					<li>
-						<h3>产品展示</h3>
+						<h3>全部产品</h3>
 						<p><a href="">单格餐盒</a></p>
 						<p><a href="">双格餐盒</a></p>
 						<p><a href="">三格餐盒</a></p>

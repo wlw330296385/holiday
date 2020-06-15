@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
@@ -32,8 +31,11 @@
 						<li>
 							<a href="{:url('index/product')}">生产工艺</a>
 						</li>
+                        <li>
+							<a href="{:url('index/show',['m'=>1])}">主要产品</a>
+						</li>
 						<li>
-							<a href="{:url('index/show')}">产品展示 </a>
+							<a href="{:url('index/show')}">全部产品 </a>
 							<div class="navDown">
 								<a href="{:url('index/show')}">快餐盒系列</a>
 								<a href="javascript:">杯子系列</a>
@@ -118,22 +120,22 @@
 						<li>
 							<span><img src="/static/frontend/images/about_phone.png"/></span>
 							<em>电话：</em>
-							<p>0755-1234567</p>
+							<p>{$setting.company_phone}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_tel.png"/></span>
 							<em>手机：</em>
-							<p>1855555555</p>
+							<p>{$setting.phone}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_mail.png"/></span>
 							<em>邮箱：</em>
-							<p>holiday@vip.cn</p>
+							<p>{$setting.email}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_position.png"/></span>
 							<em>地址：</em>
-							<p>深圳市XX路XX号XX街道深圳市XX路XX号XX街道</p>
+							<p>{$setting.location}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_weixin.png"/></span>
@@ -144,7 +146,7 @@
 						</li>
 					</ul>
 					<div class="aboutEwm">
-						<img src="/static/frontend/temp/ewm_about.jpg"/>
+						<img src="/static/frontend/images/{$setting.qrcode_obj}"/>
 					</div>
 				</div>
 				
@@ -157,32 +159,21 @@
 				
 				<div class="newsDetailW">
 					<div class="newsDetailH">
-						<h2>一次性饭盒质量怎样检测</h2>
-						<p>文/ 发布于2018-06-24 &nbsp;&nbsp; 浏览次数：2003</p>
+						<h2>{$info.title}</h2>
+						<p>文/ 发布于{$info.created_at} &nbsp;&nbsp; 浏览次数：{:rand(0,9999)}</p>
 					</div>
 					<div class="newsDetailCont">
 						<p>
-							<span>摘要：</span>一次性饭盒产品设计美观实用，不渗漏饭菜汤水的优良产品。厂房无尘车间设计，环境干净卫生，已得到国家QS单位验证通过。
+							<span>摘要：</span>
+							{$info.sub_title}
 						</p>
-						<p>
-							<span>一次性饭盒质量怎样检测</span><br />
-							一次性饭盒产品设计美观实用，不渗漏饭菜汤水的优良产品。厂房无尘车间设计，环境干净卫生，已得到国家QS单位验证通过。
-						</p>
-						<p>
-							建立完善质量管理体系、全方位规范化的管理制度，并拥有一批高素质技术人员，确保产品的质量!坚持以“技术领先、开拓创新”为原则，不断开发新产品，提升技术含量，让产品设计更多样化!
-						</p>
-						<p>
-							1、产品颜色、质地均匀，手感好，强度高;<br />
-							2、盛冷热食品时没有异味散发;<br />
-							3、易于回收和利用或环境降解;<br />
-							4、对生态环境和人体健康无害，达到国家食品卫生标准;<br />
-							5、产品上有企业名称或产品代号的明显标识。
-						</p>
+						{$info.content|raw|htmlspecialchars_decode}
 					</div>
 					
 					<div class="jump">
-						<p><a href=""><span>上一篇：</span>如何选择合格的一次性餐盒</a></p>
-						<p><a href=""><span>下一篇：</span>不被动摇的快餐时代</a></p>
+						{volist name="p_list" id= 'vol' }
+						<p><a href="{:url('index/news_detail',['id' => $vol.id])}"><span>{if $vol.id < $info.id}上{else /}下{/if}一篇：</span>{$vol.title}</a></p>
+						{/volist}
 					</div>
 					<div class="newsLink">
 						<span>分享至：</span>
@@ -209,7 +200,7 @@
 						<h3>咨询热线：</h3>
 						<p>0755-1234567</p>
 					</div>
-					<p class="footerCopy">华利达 Copyright © 2018 版权所有浙ICP备：123456号</p>
+					<p class="footerCopy">{$setting.copyright}</p>
 				</div>
 				<div class="left footerEwm">
 					<div class="pic"><img src="/static/frontend/temp/ewm.jpg"/></div>
@@ -227,7 +218,7 @@
 						<p><a href="">印刷图文</a></p>
 					</li>
 					<li>
-						<h3>产品展示</h3>
+						<h3>全部产品</h3>
 						<p><a href="">单格餐盒</a></p>
 						<p><a href="">双格餐盒</a></p>
 						<p><a href="">三格餐盒</a></p>

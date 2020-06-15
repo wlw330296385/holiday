@@ -32,8 +32,11 @@
 						<li>
 							<a href="{:url('index/product')}">生产工艺</a>
 						</li>
+                        <li>
+							<a href="{:url('index/show',['m'=>1])}">主要产品</a>
+						</li>
 						<li>
-							<a href="{:url('index/show')}">产品展示 </a>
+							<a href="{:url('index/show')}">全部产品 </a>
 							<div class="navDown">
 								<a href="{:url('index/show')}">快餐盒系列</a>
 								<a href="javascript:">杯子系列</a>
@@ -115,22 +118,22 @@
 						<li>
 							<span><img src="/static/frontend/images/about_phone.png"/></span>
 							<em>电话：</em>
-							<p>0755-1234567</p>
+							<p>{$setting.company_phone}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_tel.png"/></span>
 							<em>手机：</em>
-							<p>1855555555</p>
+							<p>{$setting.phone}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_mail.png"/></span>
 							<em>邮箱：</em>
-							<p>holiday@vip.cn</p>
+							<p>{$setting.email}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_position.png"/></span>
 							<em>地址：</em>
-							<p>深圳市XX路XX号XX街道深圳市XX路XX号XX街道</p>
+							<p>{$setting.location}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_weixin.png"/></span>
@@ -141,7 +144,7 @@
 						</li>
 					</ul>
 					<div class="aboutEwm">
-						<img src="/static/frontend/temp/ewm_about.jpg"/>
+						<img src="/static/frontend/images/{$setting.qrcode_obj}"/>
 					</div>
 				</div>
 				
@@ -319,7 +322,7 @@
 						<h3>咨询热线：</h3>
 						<p>0755-1234567</p>
 					</div>
-					<p class="footerCopy">华利达 Copyright © 2018 版权所有浙ICP备：123456号</p>
+					<p class="footerCopy">{$setting.copyright}</p>
 				</div>
 				<div class="left footerEwm">
 					<div class="pic"><img src="/static/frontend/temp/ewm.jpg"/></div>
@@ -337,7 +340,7 @@
 						<p><a href="">印刷图文</a></p>
 					</li>
 					<li>
-						<h3>产品展示</h3>
+						<h3>全部产品</h3>
 						<p><a href="">单格餐盒</a></p>
 						<p><a href="">双格餐盒</a></p>
 						<p><a href="">三格餐盒</a></p>

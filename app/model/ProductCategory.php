@@ -31,4 +31,34 @@ class ProductCategory extends Model
         $result = tree($list);
         return $result;
     }
+
+    /**
+     * @return array
+     * @throws \think\db\exception\DataNotFoundException
+     * @throws \think\db\exception\DbException
+     * @throws \think\db\exception\ModelNotFoundException
+     */
+    public function cateTree()
+    {
+        $cate = self::select();
+
+        $cate = $this->_sort($cate);
+
+        return $cate;
+    }
+
+    private function _sort($data, $pid = 0, $level = 0)
+    {
+        static $arr = [];
+
+        foreach ($data as $k => $v) {
+            if ($v['pid'] == $pid) {
+                $v->level = $level;
+                $arr[] = $v->toArray();
+                $this->_sort($data, $v['id'], $level + 1);
+            }
+        }
+
+        return $arr;
+    }
 }
