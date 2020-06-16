@@ -17,6 +17,7 @@ class Banner extends Model
         "id"        => "int",
         "alt"  => "string",
         "image_obj"      => "string",
+        "mobile_image_obj"      => "string",
         "link_url"      => "string",
         "updated_at"=> "datetime",
         "created_at"=> "datetime",
@@ -31,6 +32,7 @@ class Banner extends Model
         $list = $this::order(['updated_at'=>'desc']) -> limit($num) -> select() -> toArray();
         foreach ($list as &$item) {
             $item['url'] = ($this -> url_prefix).$item['image_obj'];
+            $item['mobile_url'] = ($this -> url_prefix).$item['mobile_image_obj'];
         }
         return $list; 
     }

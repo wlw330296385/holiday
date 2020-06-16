@@ -71,9 +71,9 @@
 							</div>
 							<div class="navBtn"></div>
 						</li>-->
-						<li>
+						<!-- <li>
 							<a href="{:url('index/sample')}">样品领取</a>
-						</li>
+						</li> --> 
 						<li class="active" >
 							<a href="{:url('index/contact')}">联系我们</a>
 						</li>
@@ -83,7 +83,7 @@
 					<div class="pic"><img src="/static/frontend/images/icon_phone.png"/></div>
 					<div class="cont">
 						<h3>24小时咨询热线</h3>
-						<p>0755-1234567</p>
+						<p>{$setting->contact->company_phone}</p>
 					</div>
 				</div> -->
 			</div>
@@ -101,11 +101,11 @@
 		<div class="wrap">
 			<ul class="contactList clearfloat">
 				<li>
-					<a href="tel:18123663967">
+					<a href="tel:{$setting->contact->phone}">
 					<span class="icon1"><img src="/static/frontend/images/contact_icon1.png"/></span>
 					<div class="contactC">
 						<h3>点击立即打电话：</h3>
-						<p>18123663967</p>
+						<p>{$setting->contact->phone}</p>
 					</div>
 					</a>
 				</li>
@@ -114,7 +114,7 @@
 					<span class="icon2"><img src="/static/frontend/images/contact_icon2.png"/></span>
 					<div class="contactC">
 						<h3>有问题吗？点击直接发邮件</h3>
-						<p>holiday@vip.cn</p>
+						<p>{$setting->contact->email}</p>
 					</div>
 					</a>
 				</li>
@@ -122,7 +122,7 @@
 					<span class="icon3"><img src="/static/frontend/images/contact_icon3.png"/></span>
 					<div class="contactC">
 						<h3>如何找到我们？</h3>
-						<p><em>深圳市XX路XX号XX街道</em></p>
+						<p><em>{$setting.location}</em></p>
 					</div>
 				</li>
 			</ul>
@@ -141,7 +141,7 @@
 					</a>
 					<div class="footerZxPhone">
 						<h3>咨询热线：</h3>
-						<p>0755-1234567</p>
+						<p>{$setting->contact->company_phone}</p>
 					</div>
 					<p class="footerCopy">{$setting.copyright}</p>
 				</div>
@@ -205,7 +205,7 @@
 		  enableMessage:false,//设置允许信息窗发送短息
 		  message:"亲耐滴，晚上一起吃个饭吧？戳下面的链接看下地址喔~"
 		}
-		var infoWindow = new BMap.InfoWindow("电话：0755-1234567<br />邮箱：woo@vip.cn<br />地址：深圳市XX路XX号XX街道", opts);  // 创建信息窗口对象
+		var infoWindow = new BMap.InfoWindow("电话：{$setting->contact->company_phone}<br />邮箱：woo@vip.cn<br />地址：深圳市龙华区建进工业园", opts);  // 创建信息窗口对象
 		marker.addEventListener("click", function(){          
 			map.openInfoWindow(infoWindow,point); //开启信息窗口
 		});

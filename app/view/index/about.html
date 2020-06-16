@@ -67,9 +67,9 @@
 							</div>
 							<div class="navBtn"></div>
 						</li>-->
-						<li>
+						<!-- <li>
 							<a href="{:url('index/sample')}">样品领取</a>
-						</li>
+						</li> -->
 						<li>
 							<a href="{:url('index/contact')}">联系我们</a>
 						</li>
@@ -79,7 +79,7 @@
 					<div class="pic"><img src="/static/frontend/images/icon_phone.png"/></div>
 					<div class="cont">
 						<h3>24小时咨询热线</h3>
-						<p>0755-1234567</p>
+						<p>{$setting->contact->company_phone}</p>
 					</div>
 				</div> -->
 			</div>
@@ -122,17 +122,17 @@
 						<li>
 							<span><img src="/static/frontend/images/about_phone.png"/></span>
 							<em>电话：</em>
-							<p>{$setting.company_phone}</p>
+							<p>{$setting->contact->company_phone}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_tel.png"/></span>
 							<em>手机：</em>
-							<p>{$setting.phone}</p>
+							<p>{$setting->contact->phone}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_mail.png"/></span>
 							<em>邮箱：</em>
-							<p>{$setting.email}</p>
+							<p>{$setting->contact->email}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_position.png"/></span>
@@ -158,8 +158,8 @@
 					<p>您现在的位置：<a href="{:url('index/index')}">首页</a> &gt; 关于我们</p>
 				</div>
 				<div class="aboutRH">
-					<h2>专注一次性品牌餐盒膜内标贴定制</h2>
-					<p>We focus on the customization of the inner label of the disposable carton</p>
+					<h2>专注一次性环保可降解品牌餐盒生产和销售</h2>
+					<p>Focus on the production and sales of disposable environmental friendly and degradable brand lunch boxes</p>
 				</div>
 				<div class="aboutRW clearfloat">
 					<div class="pic aboutPic"><img src="/static/frontend/temp/about_r_img.jpg"/></div>
@@ -168,7 +168,7 @@
 						公司成立于2014年，是一家集研发、生产和销售于一体的多元化综合性企业。各类产品畅销市场，与多家零售商和代理商建立了长期稳定的合作关系，在行业中享有较高的地位。
 					</p>
 					<p>
-						企业拥有完善的生产工厂、先进齐全的各种生产设备、占总人数70%以上的高级技术专业人员，及专业的设计团队，是浙江先进重质量，守信誉单位。企业自创建以来，不断适应市场需求，更新设备，在满足您个性化定制需求的同时，为商家客户提供满意、一流、专业的产品和服务。
+						企业拥有完善的生产工厂、先进齐全的各种生产设备、占总人数70%以上的高级技术专业人员，及专业的设计团队，是深圳先进重质量，守信誉单位。企业自创建以来，不断适应市场需求，更新设备，在满足您个性化定制需求的同时，为商家客户提供满意、一流、专业的产品和服务。
 					</p>
 					<p>
 						企业以严格控制产品质量，使产品达到国际标准，坚持“商道以人为本，产品以质量为本”“以创新求发展，以管理求效益”之企业宗旨，奉行“市场来自质量，信誉重于泰山”之经营理念，诚挚欢迎海内外客商莅临参观，洽谈合作！
@@ -182,7 +182,7 @@
 							找不到千篇一律的理由<br />
 							无论是早已厌倦的工作，还是枯燥无味的生活<br />
 							你的态度决定你的高度<br />
-							精彩的、新颖的，只属于你得设计
+							精彩的、新颖的，只属于你的选择
 						</p>
 					</div>
 					<div class="aboutRInnerPic">
@@ -202,7 +202,7 @@
 					</a>
 					<div class="footerZxPhone">
 						<h3>咨询热线：</h3>
-						<p>0755-1234567</p>
+						<p>{$setting->contact->company_phone}</p>
 					</div>
 					<p class="footerCopy">{$setting.copyright}</p>
 				</div>

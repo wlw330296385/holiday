@@ -69,9 +69,9 @@
 							</div>
 							<div class="navBtn"></div>
 						</li>-->
-						<li>
+						<!-- <li>
 							<a href="{:url('index/sample')}">样品领取</a>
-						</li>
+						</li> -->
 						<li>
 							<a href="{:url('index/contact')}">联系我们</a>
 						</li>
@@ -81,7 +81,7 @@
 					<div class="pic"><img src="/static/frontend/images/icon_phone.png"/></div>
 					<div class="cont">
 						<h3>24小时咨询热线</h3>
-						<p>0755-1234567</p>
+						<p>{$setting->contact->company_phone}</p>
 					</div>
 				</div> -->
 			</div>
@@ -128,17 +128,17 @@
 						<li>
 							<span><img src="/static/frontend/images/about_phone.png"/></span>
 							<em>电话：</em>
-							<p>{$setting.company_phone}</p>
+							<p>{$setting->contact->company_phone}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_tel.png"/></span>
 							<em>手机：</em>
-							<p>{$setting.phone}</p>
+							<p>{$setting->contact->phone}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_mail.png"/></span>
 							<em>邮箱：</em>
-							<p>{$setting.email}</p>
+							<p>{$setting->contact->email}</p>
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_position.png"/></span>
@@ -197,7 +197,7 @@
 					</a>
 					<div class="footerZxPhone">
 						<h3>咨询热线：</h3>
-						<p>0755-1234567</p>
+						<p>{$setting->contact->company_phone}</p>
 					</div>
 					<p class="footerCopy">{$setting.copyright}</p>
 				</div>

@@ -16,13 +16,40 @@ class Index extends BaseController
     public function __construct(App $app)
     {
         parent::__construct($app);
+        try {
 
-        // 网站基本设置
-        $WebConfig = new WebConfig();
-        $setting = $WebConfig -> find_company_setting(1) -> toArray();
-        View::assign([
-            'setting' => $setting,
-        ]);
+            // 网站基本设置
+            $WebConfig = new WebConfig();
+            $setting = $WebConfig -> find_company_setting(1);
+            if (!$setting) {
+                echo '<style>body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px;}</style>
+                <div style="padding: 24px 48px;"> <h1 style="color: #66CCCC">数据表数据丢失</h1><p> ' . date('Y-m-d H:i:s') . '<br/>
+                <span style="font-size:30px;">华利达PAC</span></p><span style="font-size:25px;">
+                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1303274598&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1303274598:53" alt="点我直接qq联系" title="点我直接qq联系"/>
+                </a>
+                </span>
+                </div>';
+                die();
+            }
+            $setting -> contact = json_decode($setting -> contact_obj);
+            $setting -> banner_list = json_decode($setting -> banner_arr);
+            $setting -> image_list = json_decode($setting -> image_obj);
+
+            View::assign([
+                'setting' => $setting,
+            ]);
+        } catch (\Exception $e) {
+            return json($e->getMessage());
+        }
+    }
+
+    public function error_page(){
+        return '<style type="text/css">*{ padding: 0; margin: 0; } div{ padding: 4px 48px;} a{color:#2E5CD5;cursor: pointer;text-decoration: none} a:hover{text-decoration:underline; } body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px;} h1{ font-size: 100px; font-weight: normal; margin-bottom: 12px; } p{ line-height: 1.6em; font-size: 42px }</style>
+        <div style="padding: 24px 48px;"> <h1>:) 2020新春快乐</h1><p> ThinkPHP V' . \think\facade\App::version() . '<br/>
+        <span style="font-size:30px;">数据表数据丢失</span></p><span style="font-size:25px;">联系qq:1303274598</span></div>
+        <script type="text/javascript" src="https://tajs.qq.com/stats?sId=64890268" charset="UTF-8"></script>
+        <script type="text/javascript" src="https://e.topthink.com/Public/static/client.js"></script><think id="ee9b1aa918103c4fc"></think>';
+        die();
     }
 
     /**

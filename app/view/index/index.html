@@ -4,22 +4,22 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta content="telephone=no" name="format-detection">  
+		<meta content="telephone=no" name="format-detection">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 		<title>首页</title>
 		<link rel="stylesheet" type="text/css" href="/static/frontend/css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="/static/frontend/css/jquery.bxslider.css"/>
 		<link rel="stylesheet" type="text/css" href="/static/frontend/css/style.css?v={:time()}"/>
-		
+
 		<script type="text/javascript" src="/static/frontend/js/jquery1.11.3.min.js"></script>
 		<script type="text/javascript" src="/static/frontend/js/jquery.bxslider.min.js?v={:time()}"></script>
 		<script type="text/javascript" src="/static/frontend/js/index.js"></script>
 	</head>
 	<body>
-		<?php echo  '';?>
+	hp echo  '';?>	<?p
 		<!--top-->
 		<div id="top">
-			<img style="width: 100%; height: 120px" src="/static/frontend/images/header1.jpg" alt="">
+			<div id="header_image" style=""></div>
 			<div class="wrap clearfloat">
 
 				<div class="logo">
@@ -69,9 +69,9 @@
 							</div>
 							<div class="navBtn"></div>
 						</li>-->
-						<li>
+						<!-- <li>
 							<a href="{:url('index/sample')}">样品领取</a>
-						</li>
+						</li> -->
 						<li>
 							<a href="{:url('index/contact')}">联系我们</a>
 						</li>
@@ -81,21 +81,21 @@
 					<div class="pic"><img src="/static/frontend/images/icon_phone.png"/></div>
 					<div class="cont">
 						<h3>24小时咨询热线</h3>
-						<p>0755-1234567</p>
+						<p>{$setting->contact->company_phone}</p>
 					</div>
 				</div> -->
 			</div>
-			
+
 			<div class="muen">
 				<span class="muenX"></span>
 				<span class="muenY"></span>
 				<span class="muenZ"></span>
 			</div>
-			
-			
+
+
 		</div>
 		<!--/top-->
-		
+
 		<!--main-->
 		<div class="main">
 			<div class="banner">
@@ -104,14 +104,14 @@
 					<li>
 						<a href="{$vol.link_url}">
 							<img class="img1" src="{$vol.url}" alt="{$vol.alt}" />
-							<img class="img2" src="/static/frontend/temp/banner_wap2.jpg"/>
+							<img class="img2" src="{$vol.mobile_url}" alt="{$vol.alt}"/>
 						</a>
 					</li>
 					{/volist}
 
 				</ul>
 			</div>
-			
+
 			<div class="homeAdvance">
 				<div class="wrap">
 					<div class="homeAdvanceTit">
@@ -151,8 +151,8 @@
 							</li>
 						</ul>
 					</div>
-					
-					
+
+
 					<!--<div class="homeAdvanceWap">-->
 						<div class="homeAdvanceW clearfloat">
 							<ul class="homeAdvanceList1">
@@ -196,7 +196,7 @@
 					<!--</div>-->
 				</div>
 			</div>
-			
+
 			<div class="homeSp">
 				<div class="homeSpH">
 					<div class="bg"></div>
@@ -314,13 +314,13 @@
 								</a></li>
 							</ul>
 						</div>
-						
+
 					</div>
-					
+
 				</div>
-				
+
 			</div>
-			
+
 			<div class="homeZpc">
 				<div class="wrap clearfloat">
 					<div class="left">
@@ -334,10 +334,10 @@
 							<p>
 								公司成立于2014年，是一家集研发、生产和销售于一体的多元化综合性企业。各类产品畅销市场，与多家零售商和代理商建立了长期稳定的合作关系，在行业中享有较高的地位。
 							</p>
-							<p>	
+							<p>
 								企业拥有完善的生产工厂、先进齐全的各种生产设备、占总人数70%以上的高级技术专业人员，及专业的设计团队，是浙江先进重质量，守信誉单位。企业自创建以来，不断适应市场需求，更新设备，在满足您个性化定制需求的同时，为商家客户提供满意、一流、专业的产品和服务。
 							</p>
-							<p>	
+							<p>
 								企业以严格控制产品质量，使产品达到国际标准，坚持“商道以人为本，产品以质量为本”“以创新求发展，以管理求效益”之企业宗旨，奉行“市场来自质量，信誉重于泰山”之经营理念，诚挚欢迎海内外客商莅临参观，洽谈合作！
 							</p>
 						</div>
@@ -358,13 +358,13 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="homeDzzx">
 				<div class="homeDzzxH">
 					<div class="bg"></div>
 					<div class="homeDzzxCont">
 						<h2>按需定制，一对一量身打造</h2>
-						<h3><a href="">在线咨询</a><a href="">联系我们</a></h3>
+						<h3><a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin={$setting->contact->qq}&site=qq&menu=yes">在线咨询</a><a href="tel:{$setting->contact->phone}">联系我们</a></h3>
 					</div>
 				</div>
 				<div class="wrap">
@@ -466,7 +466,7 @@
 					</div>
 				</div>
 			</div>
-			
+
 			<div class="homeNews">
 				<div class="wrap">
 					<div class="homeNewsH clearfloat">
@@ -502,7 +502,7 @@
 								{/volist}
 							</ul>
 							<ul class="right">
-								
+
 								{volist name = "news_list" id = "vol" length = "3" offset = "3"}
 								<li class="clearfloat">
 									<div class="homeNewsNum">{:date('d',strtotime($vol.updated_at))}</div>
@@ -619,16 +619,16 @@
 							</ul>
 						</div>
 					</div>
-					
+
 				</div>
 			</div>
-			
-			
-			
+
+
+
 		</div>
-		
+
 		<!--/main-->
-		
+
 		<!--footer-->
 		<!--<div class="footerWap">-->
 		<div id="bottom">
@@ -647,7 +647,7 @@
 					</a>
 					<div class="footerZxPhone">
 						<h3>咨询热线：</h3>
-						<p>0755-1234567</p>
+						<p>{$setting->contact->company_phone}</p>
 					</div>
 					<p class="footerCopy">{$setting.company_name} Copyright © 2019 版权所有浙ICP备：123456号</p>
 				</div>
@@ -683,7 +683,7 @@
 		</div>
 		<!--</div>-->
 		<!--/footer-->
-		
+
 		<!--wap-->
 		<div class="wapBottom">
 			<ul class="clearfloat">
@@ -694,7 +694,7 @@
 			</ul>
 		</div>
 		<!--/wap-->
-		
+
 		<div class="wapBg"></div>
 	</body>
 	<script type="text/javascript">
@@ -705,17 +705,17 @@
 	    'pager':true,
 	    'speed':1000,
 			'pause':4000,
-			
+
 		})
-		
+
 		$('.sliderHomeSpT').bxSlider({
 			'auto':false,
 	    'controls':true,
 	    'touchEnabled':true,
 	    'pager':true,
-			
+
 		})
-		
+
 		var lineW = $(".lineW span").width();
 		$('.sliderHomeSpB').bxSlider({
 			'auto':false,
@@ -730,7 +730,7 @@
 	    onSlideAfter:function($slideElement, oldIndex, newIndex){
 	    	var num = $(".homeSpBW .bx-pager .bx-pager-item").length;
 	    	var lineWW = $(".lineW").width();
-	    	
+
 	    	console.log(oldIndex,newIndex)
 	    	if(newIndex == 0){
 	    		$(".lineW span").css({
@@ -741,12 +741,12 @@
 		    		"width":(lineWW/num)*(newIndex+1)+'px'
 		    	})
 	    	}
-	    	
+
 	    },
-	    
-	    
+
+
 		})
-		
+
 		$('.sliderHomeDzzc').bxSlider({
 			'auto':true,
 	    'controls':true,
@@ -759,10 +759,10 @@
 	    'speed':600,
 //	    'slideMargin': 20
 		})
-		
-		
+
+
 //		console.log(num);
-		
-		
+
+
 	</script>
 </html>

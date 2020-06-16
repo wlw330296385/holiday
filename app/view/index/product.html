@@ -69,9 +69,9 @@
 							</div>
 							<div class="navBtn"></div>
 						</li>-->
-						<li>
+						<!-- <li>
 							<a href="{:url('index/sample')}">样品领取</a>
-						</li>
+						</li> -->
 						<li>
 							<a href="{:url('index/contact')}">联系我们</a>
 						</li>
@@ -81,7 +81,7 @@
 					<div class="pic"><img src="/static/frontend/images/icon_phone.png"/></div>
 					<div class="cont">
 						<h3>24小时咨询热线</h3>
-						<p>0755-1234567</p>
+						<p>{$setting->contact->company_phone}</p>
 					</div>
 				</div> -->
 			</div>
@@ -406,7 +406,7 @@
 					</a>
 					<div class="footerZxPhone">
 						<h3>咨询热线：</h3>
-						<p>0755-1234567</p>
+						<p>{$setting->contact->company_phone}</p>
 					</div>
 					<p class="footerCopy">{$setting.copyright}</p>
 				</div>
