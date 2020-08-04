@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <div id="wrap"></div>
+<script id="tpl" type="text/html">
+<!-- html 注释 -->
+<%var i = 0%>
+<%var len = 3;%>
+<%var a = 1; b = 3%>
+a=<%:=a%>
+b=<%:h=b%>
+c=<%:u=c%>(空字符串)
+<%=a + '1 "2"' + "2"%>
+<%/*注释注释*/%>
+<%for(i = 0; i < len; i++) {%>
+<div>数字：<%=i%> <%=i+1%></div>
+<%}%>
+
+    <div class="test" id='test'>12\t3</div> 
+123 
+<%if ('1') {
+    console.log("123")
+}%>
+</script>
+<script  id="tpl666" type="text/html">
+1
+2
+
+
+3
+</script>
+<script src="template.js"></script>
+<script>
+    console.log('==================')
+    var tpl666 = template(document.getElementById('tpl666').innerHTML);
+    console.log(tpl666.toString())
+    var html = tpl666({a: 2, b: 2});
+    console.log('---html', html)
+    console.log('==================')
+
+
+    // template.config({escape: false});
+    var tpl = template(document.getElementById('tpl').innerHTML);
+    var html = tpl({a: 2, b: 2});
+    console.log(tpl.toString());
+    console.log('-----------------');
+    console.log(tpl.toString().replace(/\n/g, ' '));
+    console.log('-----------------');
+    console.log('---html', html);
+    document.getElementById('wrap').innerHTML = html;
+
+    console.log('==================')
+
+    template.config({compress: true});
+    var tpl = template(document.getElementById('tpl').innerHTML);
+    console.log('---html', tpl({a: 2, b: 3}));
+
+</script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+{include file="admin/layout/header" /}
+
+  <div class="layui-body">
+    <div class="layui-container">
+      <fieldset class="layui-elem-field layui-field-title">
+        <legend>成功案例发布</legend>
+      </fieldset>
+      <blockquote class="layui-elem-quote layui-text">
+
+      </blockquote>
+      <form class="layui-form layui-form-pane1" action="" lay-filter="first" method="post">
+
+
+         <div class="layui-form-item">
+            <label class="layui-form-label">成功案例名字</label>
+            <div class="layui-input-block">
+              <input type="text" name="name" value="" lay-verify="required|title" lay-reqText="不能为空" required placeholder="肯德基" autocomplete="off" class="layui-input" >
+              <span class="layui-badge layui-bg-green">网站标题,这是SEO的重点。系统会将此标题补到网页标题上</span>
+            </div>
+         </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">跳转链接</label>
+            <div class="layui-input-block">
+              <input type="text" name="url_link" value="" lay-verify="required|url" lay-reqText="不能为空" required placeholder="https://www.baidu.com" autocomplete="off" class="layui-input" >
+              <span class="layui-badge layui-bg-green">可以放站内产品详情页链接</span>
+            </div>
+        </div>
+
+
+          <div class="layui-form-item">
+              <label class="layui-form-label">封面图片</label>
+              <input type="hidden" value="" name="image_obj" id="image_obj">
+              <div class="layui-input-block">
+                  <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="logo">上传图片</button>&nbsp;&nbsp;&nbsp;<span class="layui-badge">尺寸最好一致(正方形)(此比例,不得超过2m)</span>
+                      <div class="layui-upload-list">
+                          <img class="layui-upload-img" src="/static/images/kongbai.png" style="width: 210px; height: 150px;" id="logo_img">
+                          <p id="logoText"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+            <div class="layui-form-item">
+              <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="*">立即发布</button>
+              </div>
+            </div>
+    </form>
+    </div>
+    <br><br><br>
+
+  </div>
+
+
+
+    <script>
+
+      layui.use(['form',  'upload'], function(){
+        var form = layui.form
+                ,$ = layui.jquery
+                ,layer = layui.layer
+                ,upload = layui.upload
+        ;
+
+          //logo图片
+          var upload_logo = upload.render({
+              elem: '#logo'
+              , url: "{:url('/upload/img')}" //改成您自己的上传接口
+              , data:{c:'success_case',dir:'temp'}
+              , size: 2000 //限制文件大小，单位 KB,1M
+              , before: function (obj) {
+                  //预读本地文件示例，不支持ie8
+                  obj.preview(function (index, file, result) {
+                      $('#logo_img').attr('src', result); //图片链接（base64）
+                  });
+              }
+              , done: function (res) {
+                  //如果上传失败
+                  if (res.code > 0) {
+                      return layer.msg('上传失败');
+                  }
+                  //上传成功
+                  layer.msg(res.msg);
+                    $('#image_obj').val(res.name);
+                    $('#logo_img').attr('src',res.path);
+              }
+              , error: function () {
+                  //演示失败状态，并实现重传
+                  var demoText = $('#logoText');
+                  demoText.html('<span style="color: #22ff85;">上传失败</span> <a class="layui-btn layui-btn-xs logo-reload">重试</a>');
+                  demoText.find('.logo-reload').on('click', function () {
+                      upload_logo.upload();
+                  });
+              }
+          });
+
+        //监听提交
+        form.on('submit(*)', function(data){
+           alert(JSON.stringify(data.field));
+
+        });
+
+      });
+
+    </script>
+
+{include file="admin/layout/footer" /}

@@ -1,0 +1,171 @@
+{include file="admin/layout/header" /}
+  <div class="layui-body">
+    <div class="layui-container">
+      <fieldset class="layui-elem-field layui-field-title">
+        <legend>banner设置</legend>
+      </fieldset>
+      <blockquote class="layui-elem-quote layui-text">
+        固定三张, 需要增加或者减少,请联系
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1303274598&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1303274598:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+      </blockquote>
+
+      <form class="layui-form" action="" method="post">
+<!--      循环开始-->
+        {volist name = "banner_list" id = "vol"}
+        <div class="layui-row">
+          <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+            <legend>第{$i}张</legend>
+          </fieldset>
+          <!--        电脑版-->
+          <div class="layui-col-xs6">
+            <div class="layui-form-item">
+              <div class="layui-upload-drag" id="test1{$key}">
+                <i class="layui-icon"></i>
+                <p>第{$i}张banner，点击或将文件拖拽到此处</p>
+                <p>电脑版，严格尺寸:1440*600像素</p>
+                <div  class="" id="uploadDemoView{$key}">
+<!--                  原本class是layui-hide-->
+                  <hr>
+                  <img src="{$vol.url}" alt="上传成功后渲染" style="max-width: 196px">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--        手机版-->
+          <div class="layui-col-xs6">
+            <div class="layui-form-item">
+              <div class="layui-upload-drag" id="test1{$key}_wap">
+                <i class="layui-icon"></i>
+                <p>第{$i}张banner，点击或将文件拖拽到此处</p>
+                <p>手机版，严格尺寸:375*168像素</p>
+                <div class="" id="uploadDemoView{$key}_wap">
+                  <hr>
+                  <img src="{$vol.mobile_url}" alt="上传成功后渲染" style="max-width: 196px">
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">图片描述</label>
+          <div class="layui-input-block">
+            <input type="text" name="alt[]" value="{$vol->alt}" lay-verify="title" autocomplete="off" placeholder="环保餐盒可降解餐盒联系电话" class="layui-input">
+          </div>
+        </div>
+
+        <div class="layui-form-item">
+          <label class="layui-form-label">banner跳转链接</label>
+          <div class="layui-input-block">
+            <input type="tel" name="link_url[]" value="{$vol->link_url}"  lay-verify="url" autocomplete="off" class="layui-input" placeholder="https://fanyi.baidu.com" >
+          </div>
+        </div>
+      </div>
+        <hr>
+        {/volist}
+<!--    循环结束-->
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+        </div>
+      </div>
+      </form>
+    </div>
+    <br><br><br>
+
+  </div>
+
+    <script>
+
+      layui.use(['form', 'upload'], function(){
+        var form = layui.form
+                ,layer = layui.layer
+                ,upload = layui.upload
+        ;
+
+        //banner1
+        var banner1 = upload.render({
+          elem: '#test10'
+          , url: "{:url('/upload/img')}" //改成您自己的上传接口
+          , data:{c:'banner',dir:'temp',key:1}
+          , size: 5000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView0').removeClass('layui-hide').find('img').attr('src', res.path);
+
+          }
+        });
+        //banner2
+        var banner2 = upload.render({
+          elem: '#test11'
+          , url: "{:url('/upload/img')}" //改成您自己的上传接口
+          , data:{c:'banner',dir:'temp',key:2}
+          , size: 5000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView1').removeClass('layui-hide').find('img').attr('src',  res.path);
+
+          }
+        });
+        //banner3
+        var banner3 = upload.render({
+          elem: '#test12'
+          , url: "{:url('/upload/img')}" //改成您自己的上传接口
+          , data:{c:'banner',dir:'temp',key:3}
+          , size: 5000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView2').removeClass('layui-hide').find('img').attr('src',  res.path);
+
+          }
+        });
+
+        //手机版banner_wap
+        var banner_wap1 = upload.render({
+          elem: '#test10_wap'
+          , url: "{:url('/upload/img')}" //改成您自己的上传接口
+          , data:{c:'banner_wap',dir:'temp',key:1}
+          , size: 5000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView0_wap').removeClass('layui-hide').find('img').attr('src', res.path);
+
+          }
+        });
+        //banner2
+        var banner_wap2 = upload.render({
+          elem: '#test11_wap'
+          , url: "{:url('/upload/img')}" //改成您自己的上传接口
+          , data:{c:'banner_wap',dir:'temp',key:2}
+          , size: 5000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView1_wap').removeClass('layui-hide').find('img').attr('src',  res.path);
+
+          }
+        });
+        //banner3
+        var banner3 = upload.render({
+          elem: '#test12_wap'
+          , url: "{:url('/upload/img')}" //改成您自己的上传接口
+          , data:{c:'banner_wap',dir:'temp',key:3}
+          , size: 5000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView2_wap').removeClass('layui-hide').find('img').attr('src',  res.path);
+
+          }
+        });
+
+
+
+        //监听提交
+        form.on('submit(*)', function(data){
+
+          alert(JSON.stringify(data.field));
+
+        });
+
+      });
+
+    </script>
+
+{include file="admin/layout/footer" /}

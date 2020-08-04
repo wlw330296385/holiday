@@ -1,0 +1,96 @@
+		<div id="footer">
+			<div class="wrap clearfloat" style="padding: 0 5% 0 5%">
+				<div class="left footerZx" style="text-align: center;">
+
+					<div class="left footerEwm">
+						<div class="pic">
+							<img src="{$setting->qrcode_url}"/>
+							<p>手机扫一扫</p>
+							
+						<a href="tel:{$setting->contact->phone}" class="footerZxH">
+							<span>
+								<img src="/static/frontend/images/icon_footer_zx.png"/>
+							</span>
+
+							在线咨询
+						</a>
+
+						</div>
+					</div>
+
+					<div class="footerZxPhone">
+						<p>{$setting->contact->company_phone}</p>
+					</div>
+					
+				</div>
+
+				<ul class="clearfloat">
+					{volist name="product_category_list" id="vol"}
+					<li>
+						<h3>{$vol.name}</h3>
+						{volist name="vol.child" id="v"}
+						<p><a href="{:url('show',['c'=>1])}">{$v.name}</a></p>
+						{/volist}
+					</li>
+					{/volist}
+				</ul>
+			</div>
+			<p class="footerCopy" style="text-align: center;">{$setting.copyright}</p>
+		</div>
+		<!--</div>-->
+		<!--/footer-->
+
+		<!--wap-->
+		<div class="wapBottom">
+			<ul class="clearfloat">
+				<li><a href="{:url('show',['c'=>3])}">盘子</a></li>
+				<li><a href="{:url('show',['c'=>1])}">餐盒</a></li>
+				<li><a href="{:url('show',['c'=>2])}">碗</a></li>
+				<li><a href="{:url('show')}">全部产品</a></li>
+			</ul>
+		</div>
+		<!--/wap-->
+
+		<div class="wapBg"></div>
+
+		<script>
+			layui.use(['util', 'layer'], function() {
+				var util = layui.util
+						, $ = layui.$
+						, layer = layui.layer;
+				//固定块
+				util.fixbar({
+					bar1: '<i class="layui-icon" style="font-size: 25px;">&#xe677;</i>'
+					, bar2: '<i class="layui-icon" style="font-size: 25px;">&#xe698;</i>'
+					, css: {right: 50, bottom: 100}
+					, bgcolor: '#393D49'
+					, click: function (type) {
+						if (type === 'bar1') {
+							layer.msg('<img src="/static/images/rqcode_weixingongzhonghao.jpg">', {
+								time: 20000, //20s后自动关闭
+								btn: ['扫一扫关注微信公众号'],
+								btnAlign: 'c',
+								offset: '100px'
+							});
+						} else if (type === 'bar2') {
+							layer.msg('<img src="/static/images/rqcode_weixinxiaochengxu.jpg">', {
+								time: 20000, //20s后自动关闭
+								btn: ['扫一扫直接小程序下单'],
+								btnAlign: 'c',
+								offset: '100px'
+							});
+						}
+					}
+				});
+			});
+		</script>
+		<!-- lazy -->
+		<script src="/static/echojs/js/echo.min.js"></script>
+		<script>
+		Echo.init({
+			offset: 0,
+			throttle: 0
+		});
+		</script>
+	</body>
+</html>

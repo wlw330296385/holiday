@@ -1,0 +1,260 @@
+<?php /*a:3:{s:41:"F:\tpholidaytp\app\view\admin\banner.html";i:1592634413;s:48:"F:\tpholidaytp\app\view\admin\layout\header.html";i:1593325041;s:48:"F:\tpholidaytp\app\view\admin\layout\footer.html";i:1592476216;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>layout 后台大布局 - Layui</title>
+<link rel="stylesheet" href="/static/backend/layui/css/layui.css">
+<link rel="stylesheet" href="/static/backend/css/style.css">
+<script src="/static/backend/layui/layui.js"></script>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo"><?php echo htmlentities($setting->company_name); ?>后台</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="<?php echo url('admin/index'); ?>">首页</a></li>
+      <li class="layui-nav-item"><a href="">用户管理</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">管理</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">邮件管理</a></dd>
+          <dd><a href="javascript:;">消息管理</a></dd>
+          <dd><a href="javascript:;">授权管理</a></dd>
+        </dl>
+      </li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item"><a href="<?php echo request()->domain(); ?>" target="_blank">前往官网查看</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="/static/frontend/images/logo.png" class="layui-nav-img">
+          <?php echo htmlentities($user); ?>
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="<?php echo url('admin/clear'); ?>">退出</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item  layui-nav-itemed"><a href="<?php echo url('admin/index'); ?>">官网首页属性</a></li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">官网内容布局</a>
+           <dl class="layui-nav-child">
+            <dd><a href="javascript:;">友情链接</a></dd>
+            <dd><a href="<?php echo url('banner'); ?>">benner管理</a></dd>
+            <dd><a href="javascript:;">其他页面横幅管理</a></dd>
+            <dd><a href="javascript:;">主页内容管理</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a class="" href="javascript:;">产品管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="<?php echo url('product'); ?>">主要产品页</a></dd>
+            <dd><a href="javascript:;">产品展示页</a></dd>
+            <dd><a href="javascript:;">成功合作</a></dd>
+            <dd><a href="http://tools.bugscaner.com/chaojiwailian/" title="Outer chain" target="_blank" >发布外链</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="<?php echo url('news'); ?>">文章管理</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+  <div class="layui-body">
+    <div class="layui-container">
+      <fieldset class="layui-elem-field layui-field-title">
+        <legend>banner设置</legend>
+      </fieldset>
+      <blockquote class="layui-elem-quote layui-text">
+        固定三张, 需要增加或者减少,请联系
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1303274598&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1303274598:51" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+      </blockquote>
+
+      <form class="layui-form" action="" method="post">
+<!--      循环开始-->
+        <?php if(is_array($banner_list) || $banner_list instanceof \think\Collection || $banner_list instanceof \think\Paginator): $i = 0; $__LIST__ = $banner_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?>
+        <div class="layui-row">
+          <fieldset class="layui-elem-field layui-field-title" style="margin-top: 30px;">
+            <legend>第<?php echo htmlentities($i); ?>张</legend>
+          </fieldset>
+          <!--        电脑版-->
+          <div class="layui-col-xs6">
+            <div class="layui-form-item">
+              <div class="layui-upload-drag" id="test1<?php echo htmlentities($key); ?>">
+                <i class="layui-icon"></i>
+                <p>第<?php echo htmlentities($i); ?>张banner，点击或将文件拖拽到此处</p>
+                <p>手机版，尺寸:1920*980像素</p>
+                <div  class="" id="uploadDemoView<?php echo htmlentities($key); ?>">
+<!--                  原本class是layui-hide-->
+                  <hr>
+                  <img src="<?php echo htmlentities($vol['url']); ?>" alt="上传成功后渲染" style="max-width: 196px">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--        手机版-->
+          <div class="layui-col-xs6">
+            <div class="layui-form-item">
+              <div class="layui-upload-drag" id="test1<?php echo htmlentities($key); ?>_wap">
+                <i class="layui-icon"></i>
+                <p>第<?php echo htmlentities($i); ?>张banner，点击或将文件拖拽到此处</p>
+                <p>电脑版，尺寸:375*96像素</p>
+                <div class="" id="uploadDemoView<?php echo htmlentities($key); ?>_wap">
+                  <hr>
+                  <img src="<?php echo htmlentities($vol['mobile_url']); ?>" alt="上传成功后渲染" style="max-width: 196px">
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">图片描述</label>
+          <div class="layui-input-block">
+            <input type="text" name="alt[]" value="<?php echo htmlentities($vol->alt); ?>" lay-verify="title" autocomplete="off" placeholder="环保餐盒可降解餐盒联系电话" class="layui-input">
+          </div>
+        </div>
+
+        <div class="layui-form-item">
+          <label class="layui-form-label">banner跳转链接</label>
+          <div class="layui-input-block">
+            <input type="tel" name="link_url[]" value="<?php echo htmlentities($vol->link_url); ?>"  lay-verify="url" autocomplete="off" class="layui-input" placeholder="https://fanyi.baidu.com" >
+          </div>
+        </div>
+      </div>
+        <hr>
+        <?php endforeach; endif; else: echo "" ;endif; ?>
+<!--    循环结束-->
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+        </div>
+      </div>
+      </form>
+    </div>
+    <br><br><br>
+
+  </div>
+
+    <script>
+
+      layui.use(['form', 'upload'], function(){
+        var form = layui.form
+                ,layer = layui.layer
+                ,upload = layui.upload
+        ;
+
+        //banner1
+        var banner1 = upload.render({
+          elem: '#test10'
+          , url: "<?php echo url('/upload/img'); ?>" //改成您自己的上传接口
+          , data:{c:'banner',dir:'temp',key:1}
+          , size: 10000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView0').removeClass('layui-hide').find('img').attr('src',  '/storage/temp/'+res.path);
+
+          }
+        });
+        //banner2
+        var banner2 = upload.render({
+          elem: '#test11'
+          , url: "<?php echo url('/upload/img'); ?>" //改成您自己的上传接口
+          , data:{c:'banner',dir:'temp',key:2}
+          , size: 10000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView1').removeClass('layui-hide').find('img').attr('src',  '/storage/temp/'+res.path);
+
+          }
+        });
+        //banner3
+        var banner3 = upload.render({
+          elem: '#test12'
+          , url: "<?php echo url('/upload/img'); ?>" //改成您自己的上传接口
+          , data:{c:'banner',dir:'temp',key:3}
+          , size: 10000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView2').removeClass('layui-hide').find('img').attr('src',  '/storage/temp/'+res.path);
+
+          }
+        });
+
+        //手机版banner_wap
+        var banner_wap1 = upload.render({
+          elem: '#test10_wap'
+          , url: "<?php echo url('/upload/img'); ?>" //改成您自己的上传接口
+          , data:{c:'banner_wap',dir:'temp',key:1}
+          , size: 10000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView0_wap').removeClass('layui-hide').find('img').attr('src', '/storage/temp/'+res.path);
+
+          }
+        });
+        //banner2
+        var banner_wap2 = upload.render({
+          elem: '#test11_wap'
+          , url: "<?php echo url('/upload/img'); ?>" //改成您自己的上传接口
+          , data:{c:'banner_wap',dir:'temp',key:2}
+          , size: 10000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView1_wap').removeClass('layui-hide').find('img').attr('src',  '/storage/temp/'+res.path);
+
+          }
+        });
+        //banner3
+        var banner3 = upload.render({
+          elem: '#test12_wap'
+          , url: "<?php echo url('/upload/img'); ?>" //改成您自己的上传接口
+          , data:{c:'banner_wap',dir:'temp',key:3}
+          , size: 10000 //限制文件大小，单位 KB,10M
+          ,done: function(res){
+            layer.msg('上传成功');
+            layui.$('#uploadDemoView2_wap').removeClass('layui-hide').find('img').attr('src',  '/storage/temp/'+res.path);
+
+          }
+        });
+
+
+
+        //监听提交
+        form.on('submit(*)', function(data){
+
+          alert(JSON.stringify(data.field));
+
+        });
+
+      });
+
+    </script>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © <?php echo htmlentities($setting['copyright']); ?>
+    </div>
+</div>
+    <script>
+        //JavaScript代码区域
+        layui.use('element', function(){
+            var element = layui.element;
+
+        });
+    </script>
+
+</body>
+</html>
+

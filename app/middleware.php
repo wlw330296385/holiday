@@ -6,5 +6,7 @@ return [
     // 多语言加载
     // \think\middleware\LoadLangPack::class,
     // Session初始化
-    // \think\middleware\SessionInit::class
+    \think\middleware\SessionInit::class,
+    //http输入内容检查
+    // app\middleware\Httpchk::class
 ];

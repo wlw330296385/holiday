@@ -1,0 +1,93 @@
+<?php
+namespace app\model;
+
+use think\Model;
+use think\facade\Db;
+class Product extends Model
+{
+
+    // 设置当前模型对应的完整数据表名称
+    protected $table = 'product';
+
+    // 设置当前模型的数据库连接
+    protected $connection = 'mysql';
+
+    protected $url_prefix = '/storage/temp/product/';
+
+    // 设置字段信息
+    protected $schema = [
+        "id"        => "int",
+        "name"     => "string",
+        "top_price"      => "decimal",
+        "bottom_price"      => "decimal",
+        "category_id"      => "int",
+        "company_id"      => "int",
+        "updated_at"=> "datetime",
+        "created_at"=> "datetime",
+    ];
+
+    public function find_rows($category_id = 0, int $num = 9){
+        return $this::order(['updated_at'=>'desc']) -> limit($num) -> select();
+    }
+
+
+
+    public function find_row($id){
+        $info =  $this::find($id);
+        if (!$info) {
+            return $info;
+        }
+        $images = Db::table('product_images')->where(['product_id' => $info -> id])->order(['is_main'=>'DESC'])->column('image_obj');
+        foreach ($images as $key => &$item) {
+            $item = $this->url_prefix . $info -> id .'/' .$item;
+        }
+        if (empty($images)) {
+            $images = [null,null];
+        }
+        if (count($images) < 2) {
+            $images[1] = null;
+        }
+        $info -> images_url = $images;
+        return $info;
+    }
+
+
+    /**
+     * @param int $category_id
+     * @param int $num_per_page
+     * @param null $sticky
+     * @return mixed
+     */
+    public function find_pages(int $category_id = 0, int $num_per_page = 9, $sticky = null){
+        $where = ['product.company_id' => 1];
+        if ($category_id) {
+           $where =  array_merge($where,['product.category_id' => $category_id]);
+        }
+        if ($sticky) {
+            $list =  $this::field('product_images.image_obj,product.*')
+                -> where($where)
+                -> where('sticky_at','not null')
+                -> leftJoin('product_images','product_images.product_id = product.id')
+                -> group('product.id')
+                -> order(['product.updated_at'=>'DESC','product_images.is_main'=>"DESC"])
+                -> paginate($num_per_page);
+        } else {
+            $list =  $this::field('product_images.image_obj,product.*')
+                -> where($where)
+                -> leftJoin('product_images','product_images.product_id = product.id')
+                -> group('product.id')
+                -> order(['product.updated_at'=>'DESC','product_images.is_main'=>"DESC"])
+                -> paginate($num_per_page);
+        }
+
+        foreach ($list as $key => &$val) {
+            if ($val -> image_obj) {
+                $val -> image_url = $this -> url_prefix . $val -> id .'/' .$val ->image_obj;
+            } else {
+                $val -> image_url = $this -> url_prefix . 'sample.jpg';
+            }
+
+        }
+        return $list;
+    }
+}

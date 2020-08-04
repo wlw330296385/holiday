@@ -1,0 +1,148 @@
+<?php /*a:3:{s:39:"F:\tpholidaytp\app\view\admin\news.html";i:1592906879;s:48:"F:\tpholidaytp\app\view\admin\layout\header.html";i:1593325041;s:48:"F:\tpholidaytp\app\view\admin\layout\footer.html";i:1592476216;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>layout 后台大布局 - Layui</title>
+<link rel="stylesheet" href="/static/backend/layui/css/layui.css">
+<link rel="stylesheet" href="/static/backend/css/style.css">
+<script src="/static/backend/layui/layui.js"></script>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo"><?php echo htmlentities($setting->company_name); ?>后台</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="<?php echo url('admin/index'); ?>">首页</a></li>
+      <li class="layui-nav-item"><a href="">用户管理</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">管理</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">邮件管理</a></dd>
+          <dd><a href="javascript:;">消息管理</a></dd>
+          <dd><a href="javascript:;">授权管理</a></dd>
+        </dl>
+      </li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item"><a href="<?php echo request()->domain(); ?>" target="_blank">前往官网查看</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="/static/frontend/images/logo.png" class="layui-nav-img">
+          <?php echo htmlentities($user); ?>
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="<?php echo url('admin/clear'); ?>">退出</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item  layui-nav-itemed"><a href="<?php echo url('admin/index'); ?>">官网首页属性</a></li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">官网内容布局</a>
+           <dl class="layui-nav-child">
+            <dd><a href="javascript:;">友情链接</a></dd>
+            <dd><a href="<?php echo url('banner'); ?>">benner管理</a></dd>
+            <dd><a href="javascript:;">其他页面横幅管理</a></dd>
+            <dd><a href="javascript:;">主页内容管理</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a class="" href="javascript:;">产品管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="<?php echo url('product'); ?>">主要产品页</a></dd>
+            <dd><a href="javascript:;">产品展示页</a></dd>
+            <dd><a href="javascript:;">成功合作</a></dd>
+            <dd><a href="http://tools.bugscaner.com/chaojiwailian/" title="Outer chain" target="_blank" >发布外链</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="<?php echo url('news'); ?>">文章管理</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+
+<div class="layui-body">
+    <div class="layui-container">
+        <fieldset class="layui-elem-field layui-field-title">
+            <legend>文章列表</legend>
+        </fieldset>
+        <blockquote class="layui-elem-quote layui-text" style="position: relative">
+        置顶的文章会排在最前, 首页显示最前的10篇
+        <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1303274598&site=qq&menu=yes">
+            <img border="0" src="http://wpa.qq.com/pa?p=2:1303274598:51" alt="点击这里给我发消息" title="点击这里给我发消息"/>
+        </a>
+        <div class=" layui-layout-right" style="margin-top: 1%">
+            <a href="<?php echo url('news_add'); ?>" type="button" class="layui-btn" >发布新闻</a>
+        </div>
+        </blockquote>
+        <table class="layui-table">
+            <colgroup>
+                <col width="10">
+            </colgroup>
+            <thead>
+            <tr>
+                <th width="10">序号</th>
+                <th width="150">标题</th>
+                <th width="80">发布时间</th>
+                <th width="600">摘要</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php if(is_array($list) || $list instanceof \think\Collection || $list instanceof \think\Paginator): $i = 0; $__LIST__ = $list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?>
+            <tr>
+                <td><?php echo htmlentities($i); ?></td>
+                <td><?php echo htmlentities($vol->title); ?></td>
+                <td><?php echo htmlentities($vol->updated_at); ?></td>
+                <td><?php echo htmlentities($vol->sub_title); ?></td>
+                <td>
+                    <div class="layui-btn-group">
+                        <a title="点击则排最前" type="button" class="layui-btn layui-btn-sm" href="<?php echo url('news',['id'=>$vol['id']]); ?>">置顶</a>
+                        <a title="点击编辑" type="button" href="<?php echo url('news_edit',['id'=>$vol['id']]); ?>" class="layui-btn layui-btn-sm"><i class="layui-icon"></i></a>
+                        <button title="点击删除" type="button" class="layui-btn layui-btn-sm"><i class="layui-icon"></i></button>
+                    </div>
+                </td>
+            </tr>
+            <?php endforeach; endif; else: echo "" ;endif; ?>
+            </tbody>
+        </table>
+
+        <!-- 显示分页 -->
+        <div class="pager">
+            <?php echo $list; ?>
+        </div>
+    </div>
+    <br><br><br>
+</div>
+
+
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © <?php echo htmlentities($setting['copyright']); ?>
+    </div>
+</div>
+    <script>
+        //JavaScript代码区域
+        layui.use('element', function(){
+            var element = layui.element;
+
+        });
+    </script>
+
+</body>
+</html>
+

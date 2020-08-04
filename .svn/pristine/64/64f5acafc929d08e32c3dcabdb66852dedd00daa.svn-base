@@ -1,0 +1,334 @@
+{include file="index/layout/header" /}
+
+		<link rel="stylesheet" type="text/css" href="/static/frontend/css/vedio.css"/>
+		<div class="bannerBox bannerProduct"></div>
+		
+		<div class="productWhy productTab">
+			<div class="productNext productNext1">
+				<span></span>
+			</div>
+			<div class="wrap">
+				<div class="productWhyH">
+					<h2>为什么选择<span>膜内贴标</span>？</h2>
+					<p><span></span> did you choose the inner label?</p>
+				</div>
+				<div class="productWap">
+					<ul class="clearfloat">
+						<li>
+							<h3>理由一</h3>
+							<div class="line"></div>
+							<p>目前市场使用的产品安全性差而且未通过相关部门的认证。</p>
+						</li>
+						<li>
+							<h3>理由二</h3>
+							<div class="line"></div>
+							<p>目前市场使用的产品易渗漏，且密封性极差，容易导致实物变味。</p>
+						</li>
+						<li>
+							<h3>理由三</h3>
+							<div class="line"></div>
+							<p>目前市场使用的产品遇高温容易变形有异味，轻易撕掉，不牢固。</p>
+						</li>
+						<li>
+							<h3>理由四</h3>
+							<div class="line"></div>
+							<p>目前市场使用的产品都长一个样子，没有差异化和体现店铺特殊。</p>
+						</li>
+						<li>
+							<h3>理由五</h3>
+							<div class="line"></div>
+							<p>目前市场使用的产品承托力差，压在一起易被压扁，不方便配送。</p>
+						</li>
+						<li>
+							<h3>理由六</h3>
+							<div class="line"></div>
+							<p>使用劣质产品容易给客户留下不好的印象，容易流失客户。</p>
+						</li>
+						<li>
+							<h3>理由七</h3>
+							<div class="line"></div>
+							<p>使用劣质产品容易丢失餐品价值，让客户感到廉价，丢失品牌形象。</p>
+						</li>
+						<li>
+							<h3>理由八</h3>
+							<div class="line"></div>
+							<p>我们采用100%全新进口原料：冷冻不脆裂，加热无异味，安全健康。</p>
+						</li>
+					</ul>
+				</div>
+				<div class="pic"><img src="/static/frontend/temp/product_img.png"/></div>
+			</div>
+		</div>
+		
+		<div class="productYf productTab">
+			<div class="productNext productNext2">
+				<span></span>
+			</div>
+			<div class="wrap">
+				<h2>好品质源于高标准</h2>
+				<ul class="productYfList clearfloat">
+					<li><a href="javascript:vido(0)">
+						<span class="icon1"><em></em></span>
+						<p>设计创新</p>
+					</a></li>
+					<li><a href="javascript:vido(0)">
+						<span class="icon2"><em></em></span>
+						<p>全自膜内贴标工艺</p>
+					</a></li>
+					<li><a href="javascript:vido(0)">
+						<span class="icon3"><em></em></span>
+						<p>生产视频</p>
+					</a></li>
+					<li><a href="javascript:vido(0)">
+						<span class="icon4"><em></em></span>
+						<p>生产加工</p>
+					</a></li>
+					<li><a href="javascript:vido(0)">
+						<span class="icon5"><em></em></span>
+						<p>库房及出货</p>
+					</a></li>
+					<li><a href="javascript:vido(0)">
+						<span class="icon6"><em></em></span>
+						<p>应用案例</p>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="productCx productTab">
+			<div class="productNext productNext3">
+				<span></span>
+			</div>
+			<div class="wrap">
+				<div class="productCxH">
+					<h2>设计创新</h2>
+					<p>{$setting->company_name}“以客户为中心”的理念，并贯彻于研发、生产、销售及售后服务</p>
+					<p>以“从客户中来，到客户中去”为指导原则、严谨、务实的作风、精益求精的工作态度，旨在为客户提供优质的产品和完善的服务</p>
+				</div>
+				<ul class="productCxList clearfloat">
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_cx_img1.jpg"/></div>
+						<p>外观设计</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_cx_img2.jpg"/></div>
+						<p>外观设计</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_cx_img3.jpg"/></div>
+						<p>外观设计</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_cx_img4.jpg"/></div>
+						<p>外观设计</p>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="productGy productTab">
+			<div class="productNext productNext4">
+				<span></span>
+			</div>
+			<div class="wrap">
+				<div class="productCxH">
+					<h2>全自膜内贴标工艺</h2>
+					<p>公司拥有先进生产设备，都是进口设备，生产工艺精良，环保安全</p>
+					<p>出产更高效迅速，能满足快消品行业餐盒的需求，选择我们为您一条龙服务，我们将为您保驾护航</p>
+				</div>
+				<ul class="productGyList clearfloat">
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_gy_img1.jpg"/></div>
+						<p>贴标工艺一</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_gy_img2.jpg"/></div>
+						<p>贴标工艺一</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_gy_img3.jpg"/></div>
+						<p>贴标工艺一</p>
+					</a></li>
+				</ul>
+				
+			</div>
+			
+		</div>
+		
+		<div class="productSp productTab">
+			<div class="productNext productNext3">
+				<span></span>
+			</div>
+			<div class="wrap">
+				<div class="productCxH">
+					<h2>生产视频</h2>
+					<p>全自动化生产，从研发到制造、由原型到成品</p>
+					<p>我们以先进的设备，精密的仪器，严谨的检测体系保证每一个环节，每一道工序的精雕细琢。</p>
+				</div>
+				<div class="productSpW">
+					<div class="productSpVideo">
+						<div class="bg"></div>
+						<!-- <video id="video-js1" class="video-js" loop controls preload="auto"  poster='/static/frontend/temp/product_img4.jpg' data-setup="" style="width: 100%; height: 100%; background-size: 100% 100%; background-position: center;">
+							<source src="https://blz-videos.nosdn.127.net/1/OverWatch/AnimatedShots/Overwatch_AnimatedShot_Soldier76_Hero.mp4" type='video/mp4'></source>
+						</video> -->
+						<video id="video-bg1" class="video-js benginVedio" controls preload="auto" poster='/static/frontend/temp/product_img4.jpg' data-setup='{"techOrder": ["html5", "flash", "other supported tech"]}' style="width: 100%; height: 100%; background-size: 100%; background-position: center;">
+							<source src="https://blz-videos.nosdn.127.net/1/OverWatch/AnimatedShots/Overwatch_AnimatedShot_Soldier76_Hero.mp4" type='video/mp4'></source>
+						</video>
+					</div>
+					<div class="productSpPic">
+						<div class="bg"></div>
+						<div class="pic"><img src="/static/frontend/temp/product_sp_img.jpg"/></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="productJg productTab">
+			<div class="productNext productNext5">
+				<span></span>
+			</div>
+			<div class="wrap">
+				<div class="productCxH">
+					<h2>生产加工</h2>
+					<p>为了制造出顶尖的产品，满足广大用户需求，{$setting->company_name}以欧洲标准构建了专业的产品生产线。</p>
+				</div>
+				<ul class="productGyList productJgList clearfloat">
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_img1.jpg"/></div>
+						<p>优质PP原料</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_img2.jpg"/></div>
+						<p>原料加工</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_img3.jpg"/></div>
+						<p>产品量产</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_img4.jpg"/></div>
+						<p>产品打包</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_img5.jpg"/></div>
+						<p>产品存放</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_img6.jpg"/></div>
+						<p>各类质量安全检测</p>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="productCh productTab">
+			<div class="productNext productNext3">
+				<span></span>
+			</div>
+			<div class="wrap">
+				<div class="productCxH">
+					<h2>库房及出货</h2>
+					<p>车间环境净化致力于打造一个干净，整洁，美好的车间环境，减少油污粉尘等对车间工人健康的危害。 减少或控制污染源的产生</p>
+				</div>
+				<ul class="productCxList clearfloat">
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_ch_img1.jpg"/></div>
+						<p>库房一角</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_ch_img2.jpg"/></div>
+						<p>库房一角</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_ch_img3.jpg"/></div>
+						<p>叉车搬运</p>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_ch_img4.jpg"/></div>
+						<p>物流车队</p>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="productAl productTab">
+			<div class="productNext productNext2">
+				<span></span>
+			</div>
+			<div class="wrap">
+				<div class="productCxH">
+					<h2>应用案例</h2>
+					<p>我们的产品被各行各业广泛应用</p>
+				</div>
+				<ul class="productAlList clearfloat">
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_al_img1.jpg"/></div>
+						<h3>酒店</h3>
+						<div class="bg">
+							<div class="writ">
+								<p>车间环境净化致力于打造一个干净，整洁，美好的车间环境，减少油污粉尘等对车间工人健康的危害。</p>
+							</div>
+						</div>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_al_img2.jpg"/></div>
+						<h3>快餐</h3>
+						<div class="bg">
+							<div class="writ">
+								<p>车间环境净化致力于打造一个干净，整洁，美好的车间环境，减少油污粉尘等对车间工人健康的危害。</p>
+							</div>
+						</div>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_al_img3.jpg"/></div>
+						<h3>饭店</h3>
+						<div class="bg">
+							<div class="writ">
+								<p>车间环境净化致力于打造一个干净，整洁，美好的车间环境，减少油污粉尘等对车间工人健康的危害。</p>
+							</div>
+						</div>
+					</a></li>
+					<li><a href="">
+						<div class="pic"><img src="/static/frontend/temp/product_al_img4.jpg"/></div>
+						<h3>奶茶店</h3>
+						<div class="bg">
+							<div class="writ">
+								<p>车间环境净化致力于打造一个干净，整洁，美好的车间环境，减少油污粉尘等对车间工人健康的危害。</p>
+							</div>
+						</div>
+					</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		
+		
+		
+{include file="index/layout/footer" /}
+	
+	<script type="text/javascript" src="/static/frontend/js/video.min.js"></script>
+
+
+	<script type="text/javascript">
+		//电梯副导航点击下拉
+	$(window).scroll(function(){
+		var scollTop = $(window).scrollTop();
+		var eleH = $(".productCx").offset().top;
+		if($(window).width()>992){
+			if(scollTop>=eleH-110){
+				$(".navNext").stop().animate({"top":'100px'},600);
+			}else{
+				$(".navNext").stop().animate({"top":'-40px'},500);
+			}
+		}
+		if($(window).width()<=1024 && $(window).width()>992){
+			if(scollTop>=eleH-110){
+				$(".navNext").stop().animate({"top":'90px'},600);
+			}else{
+				$(".navNext").stop().animate({"top":'-40px'},500);
+			}
+		}
+		
+	})
+	</script>
+</html>

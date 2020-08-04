@@ -1,0 +1,252 @@
+<?php /*a:3:{s:43:"F:\tpholidaytp\app\view\admin\news_add.html";i:1592893821;s:48:"F:\tpholidaytp\app\view\admin\layout\header.html";i:1592906943;s:48:"F:\tpholidaytp\app\view\admin\layout\footer.html";i:1592476216;}*/ ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>layout 后台大布局 - Layui</title>
+<link rel="stylesheet" href="/static/backend/layui/css/layui.css">
+<link rel="stylesheet" href="/static/backend/css/style.css">
+<script src="/static/backend/layui/layui.js"></script>
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <div class="layui-logo"><?php echo htmlentities($setting->company_name); ?>后台</div>
+    <!-- 头部区域（可配合layui已有的水平导航） -->
+    <ul class="layui-nav layui-layout-left">
+      <li class="layui-nav-item"><a href="<?php echo url('admin/index'); ?>">首页</a></li>
+      <li class="layui-nav-item"><a href="">用户管理</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">管理</a>
+        <dl class="layui-nav-child">
+          <dd><a href="javascript:;">邮件管理</a></dd>
+          <dd><a href="javascript:;">消息管理</a></dd>
+          <dd><a href="javascript:;">授权管理</a></dd>
+        </dl>
+      </li>
+    </ul>
+    <ul class="layui-nav layui-layout-right">
+      <li class="layui-nav-item"><a href="<?php echo request()->domain(); ?>" target="_blank">前往官网查看</a></li>
+      <li class="layui-nav-item">
+        <a href="javascript:;">
+          <img src="/static/frontend/images/logo.png" class="layui-nav-img">
+          <?php echo htmlentities($user); ?>
+        </a>
+        <dl class="layui-nav-child">
+          <dd><a href="">基本资料</a></dd>
+          <dd><a href="">安全设置</a></dd>
+        </dl>
+      </li>
+      <li class="layui-nav-item"><a href="<?php echo url('admin/clear'); ?>">退出</a></li>
+    </ul>
+  </div>
+  
+  <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+      <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+      <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+        <li class="layui-nav-item  layui-nav-itemed"><a href="<?php echo url('admin/index'); ?>">官网首页属性</a></li>
+        <li class="layui-nav-item">
+          <a href="javascript:;">官网内容布局</a>
+           <dl class="layui-nav-child">
+            <dd><a href="javascript:;">友情链接</a></dd>
+            <dd><a href="<?php echo url('banner'); ?>">benner管理</a></dd>
+            <dd><a href="javascript:;">其他页面横幅管理</a></dd>
+            <dd><a href="javascript:;">主页内容管理</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a class="" href="javascript:;">产品管理</a>
+          <dl class="layui-nav-child">
+            <dd><a href="<?php echo url('product'); ?>">主要产品页</a></dd>
+            <dd><a href="javascript:;">产品展示页</a></dd>
+            <dd><a href="javascript:;">成功合作</a></dd>
+            <dd><a href="">跳到别的网站</a></dd>
+          </dl>
+        </li>
+        <li class="layui-nav-item">
+          <a href="<?php echo url('news'); ?>">文章管理</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+
+
+  <div class="layui-body">
+    <div class="layui-container">
+      <fieldset class="layui-elem-field layui-field-title">
+        <legend>新闻详情\编辑</legend>
+      </fieldset>
+      <blockquote class="layui-elem-quote layui-text">
+        新闻最好和网页title\网页描述有相关性,都带联系电话最好
+      </blockquote>
+      <form class="layui-form layui-form-pane1" action="" lay-filter="first" method="post">
+
+
+         <div class="layui-form-item">
+            <label class="layui-form-label">标题</label>
+            <div class="layui-input-block">
+              <input type="text" name="title" value="" lay-verify="required|title" lay-reqText="标题不能为空" required placeholder="请输入标题" autocomplete="off" class="layui-input" >
+              <span class="layui-badge layui-bg-green">网站标题,这是SEO的重点。系统会将此标题补到网页标题上</span>
+            </div>
+         </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">摘要</label>
+            <div class="layui-input-block">
+              <input type="text" name="sub_title" value="" lay-verify="required|len26" lay-reqText="关键词不能为空" required placeholder="请输入标题" autocomplete="off" class="layui-input" >
+              <span class="layui-badge layui-bg-green">网站关键词,这是SEO的重点。摘要网页内文字,包括文字|产品信息相同，如果内容页与搜索信息的相关程度较高，页面质量好，内容相关性就好。</span>
+            </div>
+        </div>
+
+          <div class="layui-form-item" style="z-index:2000">
+              <label class="layui-form-label">选择文章分类</label>
+              <div class="layui-input-block">
+                  <select name="interest" lay-filter="aihao">
+                      <?php if(is_array($news_category) || $news_category instanceof \think\Collection || $news_category instanceof \think\Paginator): $i = 0; $__LIST__ = $news_category;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vol): $mod = ($i % 2 );++$i;?>
+                       <option value="<?php echo htmlentities($vol['id']); ?>"  selected="selected"><?php echo htmlentities($vol['name']); ?></option>
+                      <?php endforeach; endif; else: echo "" ;endif; ?>
+                  </select>
+              </div>
+          </div>
+
+
+          <div class="layui-form-item">
+              <label class="layui-form-label">封面图片</label>
+              <input type="hidden" value="" name="image_obj" id="image_obj">
+              <div class="layui-input-block">
+                  <div class="layui-upload">
+                      <button type="button" class="layui-btn" id="logo">上传图片</button>&nbsp;&nbsp;&nbsp;<span class="layui-badge">像素150*150以内(正方形)</span>
+                      <div class="layui-upload-list">
+                          <img class="layui-upload-img" src="/static/images/kongbai.png" style="width: 210px; height: 150px;" id="logo_img">
+                          <p id="logoText"></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+          <div class="layui-form-item">
+              <span class="layui-badge layui-bg-red">文章内容不可使用`这个符号, 键盘1左边那个,否则会导致系统报错</span>
+              <script id="editor" type="text/plain" style="width:1024px;height:500px;"></script>
+          </div>
+          <input type="hidden" value="" name="content" id="content">
+
+          <div class="layui-form-item">
+              <label class="layui-form-label">友情链接</label>
+              <div class="layui-input-block">
+                  <input type="text" name="inter_link" value="" lay-verify="url" lay-reqText="http://www.baidu.com" required placeholder="请输入友情链接" autocomplete="off" class="layui-input" >
+                  <span class="layui-badge layui-bg-green">友情链接,显示在文章下面,seo增加该链接曝光度,可以放公司商品的链接,例:http://www.baidu.com</span>
+              </div>
+          </div>
+
+            <div class="layui-form-item">
+              <div class="layui-input-block">
+                <button class="layui-btn" lay-submit lay-filter="*">立即修改</button>
+              </div>
+            </div>
+    </form>
+    </div>
+    <br><br><br>
+
+  </div>
+
+
+    <script type="text/javascript" charset="utf-8" src="/static/ueditor/ueditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/static/ueditor/ueditor.all.js"> </script>
+    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+    <script type="text/javascript" charset="utf-8" src="/static/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript">
+        //实例化编辑器
+        //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+        var ue = UE.getEditor('editor');
+        UE.Editor.prototype._bkGetActionUrl = UE.Editor.prototype.getActionUrl;
+        UE.Editor.prototype.getActionUrl = function(action) {
+            if (action == 'uploadimage' || action == 'uploadscrawl' || action == 'uploadimage') {
+                return '/upload/ueditor_img';
+            } else if (action == 'uploadvideo') {
+                return '/upload/ueditor_img';
+            } else {
+                return this._bkGetActionUrl.call(this, action);
+            }
+        }
+        ue.ready(function () {
+
+            ue.on("uploadSuccess", function (name,file, ret) {
+                console.log("uploadSuccessWjb",name, file, ret);
+            });
+        });
+    </script>
+
+    <script>
+
+      layui.use(['form',  'upload'], function(){
+        var form = layui.form
+                ,$ = layui.jquery
+                ,layer = layui.layer
+                ,upload = layui.upload
+        ;
+
+          //logo图片
+          var upload_logo = upload.render({
+              elem: '#logo'
+              , url: "<?php echo url('/upload/img'); ?>" //改成您自己的上传接口
+              , data:{c:'news',dir:'temp'}
+              , size: 1000 //限制文件大小，单位 KB,1M
+              , before: function (obj) {
+                  //预读本地文件示例，不支持ie8
+                  obj.preview(function (index, file, result) {
+                      $('#logo_img').attr('src', result); //图片链接（base64）
+                  });
+              }
+              , done: function (res) {
+                  //如果上传失败
+                  if (res.code > 0) {
+                      return layer.msg('上传失败');
+                  }
+                  //上传成功
+                  layer.msg(res.msg);
+                    $('#image_obj').val(res.name);
+                    $('#logo_img').attr('src',res.path);
+              }
+              , error: function () {
+                  //演示失败状态，并实现重传
+                  var demoText = $('#logoText');
+                  demoText.html('<span style="color: #22ff85;">上传失败</span> <a class="layui-btn layui-btn-xs logo-reload">重试</a>');
+                  demoText.find('.logo-reload').on('click', function () {
+                      upload_logo.upload();
+                  });
+              }
+          });
+
+        //监听提交
+        form.on('submit(*)', function(data){
+            var html = ue.getContent();
+            $('#content').val(html);
+           alert(JSON.stringify(data.field));
+
+        });
+
+      });
+
+    </script>
+
+    <div class="layui-footer">
+        <!-- 底部固定区域 -->
+        © <?php echo htmlentities($setting['copyright']); ?>
+    </div>
+</div>
+    <script>
+        //JavaScript代码区域
+        layui.use('element', function(){
+            var element = layui.element;
+
+        });
+    </script>
+
+</body>
+</html>
+

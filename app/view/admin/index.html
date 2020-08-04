@@ -1,0 +1,323 @@
+{include file="admin/layout/header" /}
+  <div class="layui-body">
+    <div class="layui-container">
+      <fieldset class="layui-elem-field layui-field-title">
+        <legend>网页设置</legend>
+      </fieldset>
+      <blockquote class="layui-elem-quote layui-text">
+        百度排名得分=20%的外链+40%的用户满意度+40%的内容相关性
+      </blockquote>
+      <form class="layui-form layui-form-pane1" action="" lay-filter="first" method="post">
+        <input type="hidden" name="id" value="{$setting.id}">
+        <div class="layui-form-item">
+          <label class="layui-form-label">公司名称</label>
+          <div class="layui-input-block">
+            <input type="text" name="company_name" value="{$setting->company_name}" lay-verify="required" lay-reqText="公司名称不能为空" required placeholder="请输入标题" autocomplete="off" class="layui-input" >
+          </div>
+        </div>
+
+         <div class="layui-form-item">
+            <label class="layui-form-label">网站标题</label>
+            <div class="layui-input-block">
+              <input type="text" name="title" value="{$setting->title}" lay-verify="required|title" lay-reqText="标题不能为空" required placeholder="请输入标题" autocomplete="off" class="layui-input" >
+              <span class="layui-badge layui-bg-green">网站标题,这是SEO的重点。26个中文字(其它页面系统会补上属性,所以不要超过16个字)，在搜索结果中完整显示，不会被截断。1-2个关键词最佳,核心的关键词排放在前面</span>
+            </div>
+         </div>
+
+          <div class="layui-form-item">
+            <label class="layui-form-label">网站关键词</label>
+            <div class="layui-input-block">
+              <input type="text" name="keyword" value="{$setting->keyword}" lay-verify="required|len26" lay-reqText="关键词不能为空" required placeholder="请输入标题" autocomplete="off" class="layui-input" >
+              <span class="layui-badge layui-bg-green">网站关键词,这是SEO的重点。关键词要和网页内文字,包括文字|产品信息相同，如果内容页与搜索信息的相关程度较高，页面质量好，内容相关性就好。</span>
+            </div>
+          </div>
+
+          <div class="layui-form-item">
+            <label class="layui-form-label">网站描述</label>
+            <div class="layui-input-block">
+              <textarea placeholder="{$setting->description}" name="description" class="layui-textarea" lay-verify="required|len120">{$setting->description}</textarea>
+              <span class="layui-badge layui-bg-green">网站描述,这是SEO的重点。信息简短有效,作为百度快照的内容, 不要超过78个字。</span>
+            </div>
+          </div>
+
+          <div class="layui-form-item">
+            <label class="layui-form-label">联系手机</label>
+            <div class="layui-input-block">
+              <input type="tel" name="phone" value="{$setting -> contact -> phone}" lay-verify="required|number" lay-verType="tips" autocomplete="off" class="layui-input">
+              <span class="layui-badge layui-bg-green">全数字, 11个字, 如: 18123456789</span>
+            </div>
+          </div>
+
+          <div class="layui-form-item">
+            <label class="layui-form-label">联系座机</label>
+            <div class="layui-input-block">
+              <input type="tel" name="company_phone" value="{$setting -> contact -> company_phone}"  lay-verType="tips" autocomplete="off" class="layui-input">
+              <span class="layui-badge layui-bg-green"> 如: 0755-1234567</span>
+            </div>
+          </div>
+
+        <div class="layui-form-item">
+          <label class="layui-form-label">联系QQ</label>
+          <div class="layui-input-block">
+            <input type="number" name="qq" value="{$setting -> contact -> qq}"  lay-verType="tips" autocomplete="off" class="layui-input">
+            <span class="layui-badge layui-bg-green"> 如: 12345678</span>
+          </div>
+        </div>
+
+        <div class="layui-form-item">
+          <label class="layui-form-label">联系微信號</label>
+          <div class="layui-input-block">
+            <input type="text" name="wx" value="{$setting -> contact -> wx}"  lay-verType="tips" autocomplete="off" class="layui-input">
+            <span class="layui-badge layui-bg-green"> 如: 18512345678 或者 holiday-wx</span>
+          </div>
+        </div>
+
+          <div class="layui-form-item">
+            <label class="layui-form-label">地址</label>
+            <div class="layui-input-block">
+              <input type="text" name="location" value="{$setting->location}" lay-verify="required|len56" lay-reqText="地址不能为空" required placeholder="广东省深圳市xx区xx..." autocomplete="off" class="layui-input" >
+            </div>
+          </div>
+
+          <div class="layui-form-item">
+            <label class="layui-form-label">邮箱</label>
+            <div class="layui-input-block">
+              <input type="email" name="email" value="{$setting -> contact -> email}" lay-verify="email"  lay-verType="alert" class="layui-input" placeholder="eample@vip.com">
+              </div>
+          </div>
+
+        <div class="layui-form-item">
+          <label class="layui-form-label">网站版权</label>
+          <div class="layui-input-block">
+            <input type="tel" name="copyright" value="{$setting -> copyright}"  lay-verType="tips" autocomplete="off" class="layui-input">
+          </div>
+        </div>
+
+        <div class="layui-form-item">
+          <label class="layui-form-label">头部图片</label>
+          <div class="layui-input-block">
+            <div class="layui-upload">
+              <button type="button" class="layui-btn" id="header">上传图片</button>&nbsp;&nbsp;&nbsp;<span class="layui-badge">像素1446*96(内容在1200*96内)</span>
+              <div class="layui-upload-list">
+                <img class="layui-upload-img" style="width: 867.6px; height: 57.6px;" id="header_img" src="{$setting -> header_url}">
+                <p id="headerText"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="layui-form-item">
+          <label class="layui-form-label">头部图片(手机版)</label>
+          <div class="layui-input-block">
+            <div class="layui-upload">
+              <button type="button" class="layui-btn" id="header_wap">上传图片</button>&nbsp;&nbsp;&nbsp;<span class="layui-badge">像素375*96(内容在320*96内)</span>
+              <div class="layui-upload-list">
+                <img class="layui-upload-img" style="width: 375.6px; height:96px;" id="header_wap_img" src="{$setting -> header_wap_url}">
+                <p id="header_wapText"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="layui-form-item">
+          <label class="layui-form-label">logo图片</label>
+          <div class="layui-input-block">
+            <div class="layui-upload">
+              <button type="button" class="layui-btn" id="logo">上传图片</button>&nbsp;&nbsp;&nbsp;<span class="layui-badge">像素150*150以内(正方形)</span>
+              <div class="layui-upload-list">
+                <img class="layui-upload-img" src="{$setting -> logo_url}" style="width: 150px; height: 150px;" id="logo_img">
+                <p id="logoText"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="layui-form-item">
+          <label class="layui-form-label">微信二维码</label>
+          <div class="layui-input-block">
+            <div class="layui-upload">
+              <button type="button" class="layui-btn" id="qrcode">上传图片</button>&nbsp;&nbsp;&nbsp;<span class="layui-badge">像素375*375以内(正方形)</span>
+              <div class="layui-upload-list">
+                <img class="layui-upload-img" src="{$setting -> qrcode_url}" style="width: 150px; height: 150px;" id="qrcode_img">
+                <p id="qrcodeText"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="layui-form-item">
+          <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="*">立即提交</button>
+            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+          </div>
+        </div>
+    </form>
+    </div>
+    <br><br><br>
+
+  </div>
+
+    <script>
+
+      layui.use(['form', 'layedit', 'laydate', 'upload'], function(){
+        var form = layui.form
+                ,$ = layui.jquery
+                ,layer = layui.layer
+                ,upload = layui.upload
+        ;
+
+        //头部图片
+        var upload_header = upload.render({
+          elem: '#header'
+          , url: "{:url('/upload/img')}" //改成您自己的上传接口
+          , data:{c:'header',dir:'images'}
+          , size: 5000 //限制文件大小，单位 KB,10M
+          , before: function (obj) {
+            //预读本地文件示例，不支持ie8
+            obj.preview(function (index, file, result) {
+              $('#header_img').attr('src', result); //图片链接（base64）
+            });
+          }
+          , done: function (res) {
+            //如果上传失败
+            if (res.code > 0) {
+              return layer.msg('上传失败');
+            }
+            //上传成功
+            layer.msg(res.msg);
+            var headerText = $('#headerText');
+            headerText.html('');
+          }
+          , error: function () {
+            //演示失败状态，并实现重传
+            var headerText = $('#headerText');
+            headerText.html('<span style="color: #22ff85;">上传失败</span> <a class="layui-btn layui-btn-xs header-reload">重试</a>');
+            headerText.find('.header-reload').on('click', function () {
+              upload_header.upload();
+            });
+          }
+        });
+
+
+        //头部图片
+        var header_wap_header = upload.render({
+          elem: '#header_wap'
+          , url: "{:url('/upload/img')}" //改成您自己的上传接口
+          , data:{c:'header_wap',dir:'images'}
+          , size: 5000 //限制文件大小，单位 KB,5M
+          , before: function (obj) {
+            //预读本地文件示例，不支持ie8
+            obj.preview(function (index, file, result) {
+              $('#header_wap_img').attr('src', result); //图片链接（base64）
+            });
+          }
+          , done: function (res) {
+            //如果上传失败
+            if (res.code > 0) {
+              return layer.msg('上传失败');
+            }
+            //上传成功
+            layer.msg(res.msg);
+            var header_wapText = $('#headerText');
+            header_wapText.html('');
+          }
+          , error: function () {
+            //演示失败状态，并实现重传
+            var header_wapText = $('#header_wapText');
+            header_wapText.html('<span style="color: #22ff85;">上传失败</span> <a class="layui-btn layui-btn-xs header_wap-reload">重试</a>');
+            header_wapText.find('.header_wap-reload').on('click', function () {
+              upload_header_wap.upload();
+            });
+          }
+        });
+
+
+        //logo图片
+        var upload_logo = upload.render({
+          elem: '#logo'
+          , url: "{:url('/upload/img')}" //改成您自己的上传接口
+          , data:{c:'logo',dir:'images'}
+          , size: 5000 //限制文件大小，单位 KB,1M
+          , before: function (obj) {
+            //预读本地文件示例，不支持ie8
+            obj.preview(function (index, file, result) {
+              $('#logo_img').attr('src', result); //图片链接（base64）
+            });
+          }
+          , done: function (res) {
+            //如果上传失败
+            if (res.code > 0) {
+              return layer.msg('上传失败');
+            }
+            //上传成功
+            layer.msg(res.msg);
+          }
+          , error: function () {
+            //演示失败状态，并实现重传
+            var demoText = $('#logoText');
+            demoText.html('<span style="color: #22ff85;">上传失败</span> <a class="layui-btn layui-btn-xs logo-reload">重试</a>');
+            demoText.find('.logo-reload').on('click', function () {
+              upload_logo.upload();
+            });
+          }
+        });
+
+        //qrcode图片
+        var upload_qrcode = upload.render({
+          elem: '#qrcode'
+          , url: "{:url('/upload/img')}" //改成您自己的上传接口
+          , data:{c:'qrcode',dir:'images'}
+          , size: 5000 //限制文件大小，单位 KB,1M
+          , before: function (obj) {
+            //预读本地文件示例，不支持ie8
+            obj.preview(function (index, file, result) {
+              $('#qrcode_img').attr('src', result); //图片链接（base64）
+            });
+          }
+          , done: function (res) {
+            //如果上传失败
+            if (res.code > 0) {
+              return layer.msg('上传失败');
+            }
+            //上传成功
+            layer.msg(res.msg);
+            var qrcodeText = $('#qrcodeText');
+            qrcodeText.html('');
+          }
+          , error: function () {
+            //演示失败状态，并实现重传
+            var qrcodeText = $('#qrcodeText');
+            qrcodeText.html('<span style="color: #22ff85;">上传失败</span> <a class="layui-btn layui-btn-xs qrcode-reload">重试</a>');
+            qrcodeText.find('.qrcode-reload').on('click', function () {
+              upload_qrcode.upload();
+            });
+          }
+        });
+        //自定义验证规则
+        form.verify({
+          title: function(value){
+            if(value.length < 5){
+              return '标题也太短了吧';
+            }
+          }
+          ,len56: [/(.+){6,56}$/, '长度6-56']
+          ,len26: [/(.+){6,26}$/, '长度6-26']
+          ,len120: [/(.+){6,120}$/, '长度6-26']
+        });
+
+
+
+        //监听提交
+        form.on('submit(*)', function(data){
+
+          alert(JSON.stringify(data.field));
+
+        });
+
+      });
+
+    </script>
+
+{include file="admin/layout/footer" /}

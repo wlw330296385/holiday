@@ -1,0 +1,55 @@
+[2020-07-01T14:08:52+08:00][sql] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-07-01T14:08:52+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.076004s ]
+[2020-07-01T14:08:52+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.068004s ]
+[2020-07-01T14:08:52+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.079004s ]
+[2020-07-01T14:08:52+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.012000s ]
+[2020-07-01T14:08:52+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.078004s ]
+[2020-07-01T14:11:41+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-07-01T14:11:41+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-01T14:11:41+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001001s ]
+[2020-07-01T14:11:41+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-07-01T14:11:41+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-01T14:11:41+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.002001s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.002000s ]
+[2020-07-01T14:11:56+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.000000s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-01T14:11:56+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.001000s ]
+[2020-07-01T16:14:57+08:00][sql] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-07-01T16:14:57+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-07-01T16:14:57+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.002000s ]
+[2020-07-01T16:14:57+08:00][sql] SELECT COUNT(*) AS think_count FROM ( SELECT count(*) AS think_count FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  `product`.`company_id` = 1 GROUP BY `product`.`id` ) `_group_count_` [ RunTime:0.002001s ]
+[2020-07-01T16:14:57+08:00][sql] SELECT `product_images`.`image_obj`,`product`.* FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  `product`.`company_id` = 1 GROUP BY `product`.`id` ORDER BY `product`.`updated_at` DESC,`product_images`.`is_main` DESC LIMIT 0,9 [ RunTime:0.001000s ]
+[2020-07-01T16:14:58+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-07-01T16:14:58+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-01T16:15:48+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-07-01T16:15:48+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-01T16:15:48+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-07-01T16:15:48+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-07-01T16:15:48+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-01T16:15:48+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.002001s ]
+[2020-07-01T16:16:57+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-07-01T16:16:57+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-01T16:16:57+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-07-01T16:16:57+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-07-01T16:16:57+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.001000s ]
+[2020-07-01T16:16:57+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.001000s ]
+[2020-07-01T16:17:07+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-07-01T16:17:07+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-07-01T16:17:07+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-07-01T16:17:07+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-07-01T16:17:07+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.000000s ]
+[2020-07-01T16:17:07+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.001000s ]

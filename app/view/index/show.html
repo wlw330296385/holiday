@@ -1,98 +1,4 @@
-
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta content="telephone=no" name="format-detection">  
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-		<title>全部产品</title>
-		<link rel="stylesheet" type="text/css" href="/static/frontend/css/public.css"/>
-		<link rel="stylesheet" type="text/css" href="/static/frontend/css/jquery.bxslider.css"/>
-		<link rel="stylesheet" type="text/css" href="/static/frontend/css/style.css"/>
-		
-		<script type="text/javascript" src="/static/frontend/js/jquery1.11.3.min.js"></script>
-		<script type="text/javascript" src="/static/frontend/js/jquery.bxslider.min.js"></script>
-		<script type="text/javascript" src="/static/frontend/js/index.js"></script>
-	</head>
-	<body class="bgeee">
-		<!--top-->
-		<div id="top">
-			<img style="width: 100%; height: 120px" src="/static/frontend/images/header1.jpg" alt="">
-			<div class="wrap clearfloat">
-
-				<div class="logo">
-					<!--					<a href="index.html"><img src="/static/frontend/images/logo.png"/></a>-->
-				</div>
-				<div id="nav">
-					<ul class="clearfloat">
-						<li>
-							<a href="{:url('index/index')}">首页</a>
-						</li>
-						<li>
-							<a href="{:url('index/product')}">生产工艺</a>
-						</li>
-						<li {if input('m')} class="active" {/if}>
-							<a href="{:url('index/show',['m'=>1])}">主要产品</a>
-						</li>
-						<li {if !input('m')} class="active" {/if}>
-
-							<a href="{:url('index/show')}">全部产品 </a>
-							<div class="navDown">
-								<a href="{:url('index/show')}">快餐盒系列</a>
-								<a href="javascript:">杯子系列</a>
-								<a href="javascript:">品牌定制案例</a>
-							</div>
-							<div class="navBtn"></div>
-						</li>
-						<li>
-							<a href="{:url('index/news')}">资讯中心</a>
-							<div class="navDown">
-								<a href="{:url('index/news')}">行业新闻</a>
-								<a href="javascript:">餐饮知识</a>
-							</div>
-							<div class="navBtn"></div>
-						</li>
-						<li>
-							<a href="{:url('index/about')}">关于我们</a>
-							<div class="navDown">
-								<a href="{:url('index/about')}">公司简介</a>
-								<a href="javascript:">企业文化</a>
-								<a href="javascript:">公司荣誉</a>
-							</div>
-							<div class="navBtn"></div>
-						</li>
-						<!-- <li>
-							<a href="{:url('index/issue')}">常见问题</a>
-							<div class="navDown">
-								<a href="{:url('index/issue')}">常见问题</a>
-							</div>
-							<div class="navBtn"></div>
-						</li>-->
-						<!-- <li>
-							<a href="{:url('index/sample')}">样品领取</a>
-						</li> -->
-						<li>
-							<a href="{:url('index/contact')}">联系我们</a>
-						</li>
-					</ul>
-				</div>
-				<!-- <div class="topPhone clearfloat">
-					<div class="pic"><img src="/static/frontend/images/icon_phone.png"/></div>
-					<div class="cont">
-						<h3>24小时咨询热线</h3>
-						<p>{$setting->contact->company_phone}</p>
-					</div>
-				</div> -->
-			</div>
-			
-			<div class="muen">
-				<span class="muenX"></span>
-				<span class="muenY"></span>
-				<span class="muenZ"></span>
-			</div>
-		</div>
-		<!--/top-->
+{include file="index/layout/header" /}
 		
 		<div class="bannerBox bannerShow"><div class="bg"></div></div>
 		
@@ -147,14 +53,14 @@
 						</li>
 						<li>
 							<span><img src="/static/frontend/images/about_weixin.png"/></span>
-							<em>关注：</em>
+							<em>扫码 -></em>
 							<p>
-								关注微信最新动态
+								直接下单
 							</p>
 						</li>
 					</ul>
 					<div class="aboutEwm">
-						<img src="/static/frontend/images/{$setting.qrcode_obj}"/>
+						<img src="/static/images/rqcode_weixinxiaochengxu.jpg"/>
 					</div>
 				</div>
 				
@@ -162,18 +68,18 @@
 			
 			<div class="aboutR">
 				<div class="aboutRTop">
-					<p>您现在的位置：<a href="{:url('index/index')}">首页</a> &gt; 全部产品</p>
+					<p>您现在的位置：<a href="{:url('index/index')}">首页</a> &gt; <a href="{:url('index/show')}">产品列表</a></p>
 				</div>
 				<div class="showW">
 					<ul class="showList clearfloat">
-						{volist name = "p_list" id = "v"}
+						{volist name="p_list" id = "v"}
 						<li><a href="{:url('index/show_detail',['id' => $v.id])}">
-							<div class="pic"><img src="/static/frontend/temp/{$v.image_obj}" /></div>
+							<div class="pic"><img src="{$v.image_url}" /></div>
 							<p class="single-line">{$v.name}</p>
 						</a></li>
 						{/volist}
 					</ul>
-					{$p_list|raw}
+					{$page|raw}
 <!--					<div class="page">-->
 <!--						<em>首页</em>-->
 <!--						<i>上一页</i>-->
@@ -188,62 +94,7 @@
 			
 		</div>
 		
-		<!--footer-->
-		<div id="footer">
-			<div class="wrap clearfloat">
-				<div class="left footerZx">
-					<a href="" class="footerZxH">
-						<span><img src="/static/frontend/images/icon_footer_zx.png"/></span>在线咨询
-					</a>
-					<div class="footerZxPhone">
-						<h3>咨询热线：</h3>
-						<p>{$setting->contact->company_phone}</p>
-					</div>
-					<p class="footerCopy">{$setting.copyright}</p>
-				</div>
-				<div class="left footerEwm">
-					<div class="pic"><img src="/static/frontend/temp/ewm.jpg"/></div>
-					<p>手机扫一扫</p>
-				</div>
-				<ul class="clearfloat">
-					<li>
-						<h3>关于我们</h3>
-						<p><a href="">公司简介</a></p>
-						<p><a href="">企业文化</a></p>
-						<p><a href="">公司荣誉</a></p>
-					</li>
-					<li>
-						<h3>生产工艺</h3>
-						<p><a href="">印刷图文</a></p>
-					</li>
-					<li>
-						<h3>全部产品</h3>
-						<p><a href="">单格餐盒</a></p>
-						<p><a href="">双格餐盒</a></p>
-						<p><a href="">三格餐盒</a></p>
-					</li>
-					<li>
-						<h3>资讯中心</h3>
-						<p><a href="">行业新闻</a></p>
-						<p><a href="">餐饮知识</a></p>
-						<p><a href="">常见问题</a></p>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!--/footer-->
-		
-		<!--wap-->
-		<div class="wapBottom">
-			<ul class="clearfloat">
-				<li><a href="index.html">首页</a></li>
-				<li><a href="about.html">关于我们</a></li>
-				<li><a href="tel:18123663967">电话咨询</a></li>
-				<li><a href="contact.html">联系我们</a></li>
-			</ul>
-		</div>
-		<!--/wap-->
-	</body>
+{include file="index/layout/footer" /}
 </html>
 
 <!--模板文件,算了,安全起见,不用了-->

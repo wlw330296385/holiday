@@ -1,0 +1,239 @@
+[2020-06-28T09:18:59+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:18:59+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.077004s ]
+[2020-06-28T09:18:59+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.067004s ]
+[2020-06-28T09:18:59+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.068004s ]
+[2020-06-28T09:18:59+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.015001s ]
+[2020-06-28T09:18:59+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.080005s ]
+[2020-06-28T09:18:59+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:18:59+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:18:59+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-06-28T09:18:59+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-06-28T09:18:59+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.001000s ]
+[2020-06-28T09:18:59+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.002000s ]
+[2020-06-28T09:19:04+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:19:04+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:19:04+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:19:04+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:19:04+08:00][sql] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:19:04+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:19:06+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:19:06+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T09:19:06+08:00][sql] SELECT * FROM `user` WHERE  `username` = 'admin'  AND `password` = '8cb2237d0679ca88db6464eac60da96345513964' LIMIT 1 [ RunTime:0.062004s ]
+[2020-06-28T09:19:06+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:19:06+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:19:08+08:00][sql] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:19:08+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:19:08+08:00][sql] SELECT COUNT(*) AS think_count FROM `news` [ RunTime:0.001000s ]
+[2020-06-28T09:19:08+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 0,7 [ RunTime:0.001000s ]
+[2020-06-28T09:19:09+08:00][sql] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:19:09+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:19:09+08:00][sql] SHOW FULL COLUMNS FROM `news_category` [ RunTime:0.045003s ]
+[2020-06-28T09:19:09+08:00][sql] SELECT * FROM `news_category` [ RunTime:0.001000s ]
+[2020-06-28T09:20:20+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:20:20+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:20:20+08:00][error] [10501]SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'inter_link' at row 1[F:\tpholidaytp\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-06-28T09:21:34+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:21:34+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:21:34+08:00][error] [10501]SQLSTATE[22001]: String data, right truncated: 1406 Data too long for column 'inter_link' at row 1[F:\tpholidaytp\vendor\topthink\think-orm\src\db\PDOConnection.php:722]
+[2020-06-28T09:22:38+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:22:38+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:22:38+08:00][sql] INSERT INTO `news` SET `title` = '环保餐盒一次性可降解餐盒 环保外卖打包快餐盒 纸浆甘蔗浆打包盒 高档轻食饭盒 可微波 华利达供应' , `sub_title` = '一次性可降解餐盒 环保外卖打包快餐盒 纸浆甘蔗浆打包盒 高档轻食饭盒 可微波 华利达供应一次性可降解餐盒 一次性可降解餐盒 一次性可降解餐盒 ' , `content` = '<p style=\"-webkit-tap-highlight-color: rgba(0, 0, 0, 0); box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;\\\\5FAE软雅黑&quot;, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);\">环保纸浆/甘蔗浆/秸秆可降解餐盒，天然材料制成，不添加化学添加剂，无漂白，安全健康；</p><p style=\"-webkit-tap-highlight-color: rgba(0, 0, 0, 0); box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;\\\\5FAE软雅黑&quot;, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);\">内置淋膜，防水防油，盖子卡扣设计不怕渗漏，还可冷藏可微波加热。</p><p style=\"-webkit-tap-highlight-color: rgba(0, 0, 0, 0); box-sizing: border-box; margin-top: 0px; margin-bottom: 0px; padding: 0px; font-family: &quot;Helvetica Neue&quot;, Helvetica, &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, &quot;\\\\5FAE软雅黑&quot;, Arial, sans-serif; white-space: normal; background-color: rgb(255, 255, 255);\">支持出口外贸，认证齐全，适用于环保外卖打包、轻食、薯条套餐拼盘等多用。</p><p><br/></p>' , `inter_link` = 'https://b2b.baidu.com/land?url=https%3A%2F%2Fwww.zhaosw.com%2Fproduct%2Fdetail%2F38177265%3Fbdb2b8a2d%3D3452279612420329173&query=%E7%8E%AF%E4%BF%9D%E9%A4%90%E7%9B%92&category=%E5%8C%85%E8%A3%85%E5%8D%B0%E5%88%B7%3B%E9%A3%9F%E5%93%81%E5%8C%85%E8%A3%85%3B%E5%A4%96%E5%8D%96%E9%A4%90%E9%A5%AE%E5%8C%85%E8%A3%85' , `image_obj` = '20200628092000.jpg' , `created_at` = '2020-06-28 09:22:38' , `updated_at` = '2020-06-28 09:22:38' [ RunTime:0.001000s ]
+[2020-06-28T09:22:38+08:00][sql] SHOW FULL COLUMNS FROM `news` [ RunTime:0.001000s ]
+[2020-06-28T09:22:38+08:00][sql] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:22:38+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:22:38+08:00][sql] SELECT COUNT(*) AS think_count FROM `news` [ RunTime:0.000000s ]
+[2020-06-28T09:22:38+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 0,7 [ RunTime:0.000000s ]
+[2020-06-28T09:22:42+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T09:22:42+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:22:42+08:00][sql] SELECT * FROM `news` WHERE  `id` = 45 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T09:22:42+08:00][sql] SHOW FULL COLUMNS FROM `news_category` [ RunTime:0.001000s ]
+[2020-06-28T09:22:42+08:00][sql] SELECT * FROM `news_category` [ RunTime:0.000000s ]
+[2020-06-28T14:15:14+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T14:15:14+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T14:15:14+08:00][sql] SELECT COUNT(*) AS think_count FROM `news` [ RunTime:0.000000s ]
+[2020-06-28T14:15:14+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 0,7 [ RunTime:0.001000s ]
+[2020-06-28T14:15:14+08:00][sql] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T14:15:14+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T14:15:14+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T14:15:14+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T14:15:15+08:00][sql] CONNECT:[ UseTime:0.011001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T14:15:15+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T14:15:15+08:00][sql] SELECT * FROM `user` WHERE  `username` = 'admin'  AND `password` = '8cb2237d0679ca88db6464eac60da96345513964' LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T14:15:15+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T14:15:15+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T14:15:25+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T14:15:25+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T14:15:25+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.001000s ]
+[2020-06-28T14:15:43+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T14:15:43+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T14:15:43+08:00][sql] SELECT COUNT(*) AS think_count FROM `news` [ RunTime:0.000000s ]
+[2020-06-28T14:15:43+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 0,7 [ RunTime:0.001000s ]
+[2020-06-28T14:32:01+08:00][sql] CONNECT:[ UseTime:0.004000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T14:32:01+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T14:32:01+08:00][sql] SELECT COUNT(*) AS think_count FROM `news` [ RunTime:0.001000s ]
+[2020-06-28T14:32:01+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 0,7 [ RunTime:0.001000s ]
+[2020-06-28T16:04:27+08:00][sql] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:04:27+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:04:27+08:00][sql] SELECT COUNT(*) AS think_count FROM ( SELECT count(*) AS think_count FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ) `_group_count_` [ RunTime:0.001000s ]
+[2020-06-28T16:04:27+08:00][sql] SELECT `product_images`.`image_obj`,`product`.* FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ORDER BY `product`.`updated_at` DESC,`product_images`.`is_main` DESC LIMIT 0,7 [ RunTime:0.001000s ]
+[2020-06-28T16:04:27+08:00][sql] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:04:27+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T16:04:27+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:04:27+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:04:28+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:04:28+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:04:28+08:00][sql] SELECT * FROM `user` WHERE  `username` = 'admin'  AND `password` = '8cb2237d0679ca88db6464eac60da96345513964' LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:04:28+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:04:28+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:04:30+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:04:30+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:04:30+08:00][sql] SELECT COUNT(*) AS think_count FROM ( SELECT count(*) AS think_count FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ) `_group_count_` [ RunTime:0.001000s ]
+[2020-06-28T16:04:30+08:00][sql] SELECT `product_images`.`image_obj`,`product`.* FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ORDER BY `product`.`updated_at` DESC,`product_images`.`is_main` DESC LIMIT 0,7 [ RunTime:0.001000s ]
+[2020-06-28T16:17:06+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:17:06+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T16:17:06+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.000000s ]
+[2020-06-28T16:17:11+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:17:11+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:17:11+08:00][sql] SELECT COUNT(*) AS think_count FROM ( SELECT count(*) AS think_count FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ) `_group_count_` [ RunTime:0.001000s ]
+[2020-06-28T16:17:11+08:00][sql] SELECT `product_images`.`image_obj`,`product`.* FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ORDER BY `product`.`updated_at` DESC,`product_images`.`is_main` DESC LIMIT 0,7 [ RunTime:0.001000s ]
+[2020-06-28T16:17:16+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:17:16+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:17:16+08:00][sql] UPDATE `product`  SET `updated_at` = '2020-06-28 16:17:16'  WHERE  `id` = 16 [ RunTime:0.002000s ]
+[2020-06-28T16:17:16+08:00][sql] SELECT COUNT(*) AS think_count FROM ( SELECT count(*) AS think_count FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ) `_group_count_` [ RunTime:0.002000s ]
+[2020-06-28T16:17:16+08:00][sql] SELECT `product_images`.`image_obj`,`product`.* FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ORDER BY `product`.`updated_at` DESC,`product_images`.`is_main` DESC LIMIT 0,7 [ RunTime:0.001000s ]
+[2020-06-28T16:17:23+08:00][sql] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:17:23+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:17:23+08:00][error] [8]未定义变量: info[F:\tpholidaytp\app\controller\Admin.php:259]
+[2020-06-28T16:18:39+08:00][sql] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:18:39+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:18:39+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001000s ]
+[2020-06-28T16:18:39+08:00][error] [8]未定义变量: news_category[F:\tpholidaytp\runtime\temp\7a2c4dafa3852b45a860e8bd50e0f560.php:108]
+[2020-06-28T16:18:55+08:00][sql] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:18:55+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:18:55+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001001s ]
+[2020-06-28T16:41:49+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:41:49+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:41:49+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001000s ]
+[2020-06-28T16:49:04+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:49:04+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T16:49:04+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001000s ]
+[2020-06-28T16:49:04+08:00][error] [8]未定义变量: info[F:\tpholidaytp\runtime\temp\7a2c4dafa3852b45a860e8bd50e0f560.php:89]
+[2020-06-28T16:49:26+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T16:49:26+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T16:49:26+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001000s ]
+[2020-06-28T17:17:47+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:17:47+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T17:17:47+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-06-28T17:17:47+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-06-28T17:17:47+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.001001s ]
+[2020-06-28T17:17:47+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.000000s ]
+[2020-06-28T17:18:12+08:00][sql] CONNECT:[ UseTime:0.002001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:18:12+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:18:12+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-06-28T17:18:12+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-06-28T17:18:12+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.000000s ]
+[2020-06-28T17:18:12+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.001000s ]
+[2020-06-28T17:20:10+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:20:10+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:20:10+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-06-28T17:20:10+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.002001s ]
+[2020-06-28T17:20:10+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.001000s ]
+[2020-06-28T17:20:10+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.002000s ]
+[2020-06-28T17:21:18+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:21:18+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T17:21:18+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-06-28T17:21:18+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-06-28T17:21:18+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.001000s ]
+[2020-06-28T17:21:18+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.001000s ]
+[2020-06-28T17:23:19+08:00][sql] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:23:19+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:23:19+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-06-28T17:23:19+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-06-28T17:23:19+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.000000s ]
+[2020-06-28T17:23:19+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.001000s ]
+[2020-06-28T17:23:21+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:23:21+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T17:23:21+08:00][sql] SELECT * FROM `friend_link` ORDER BY `updated_at` DESC [ RunTime:0.001000s ]
+[2020-06-28T17:23:21+08:00][sql] SELECT * FROM `news` ORDER BY `updated_at` DESC LIMIT 6 [ RunTime:0.001000s ]
+[2020-06-28T17:23:21+08:00][sql] SELECT * FROM `banner` ORDER BY `updated_at` DESC LIMIT 3 [ RunTime:0.001000s ]
+[2020-06-28T17:23:21+08:00][sql] SELECT `product`.*,`pi`.`image_obj` FROM `product` INNER JOIN `product_images` `pi` ON `product`.`id`=`pi`.`product_id` ORDER BY `product`.`sticky_at` DESC,`product`.`updated_at` DESC LIMIT 7 [ RunTime:0.000000s ]
+[2020-06-28T17:29:15+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:29:15+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:29:15+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001001s ]
+[2020-06-28T17:29:15+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:29:15+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T17:29:15+08:00][sql] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:29:15+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T17:29:17+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:29:17+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:29:17+08:00][sql] SELECT * FROM `user` WHERE  `username` = 'admin'  AND `password` = '8cb2237d0679ca88db6464eac60da96345513964' LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:29:17+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:29:17+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:29:19+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:29:19+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T17:29:19+08:00][sql] SELECT COUNT(*) AS think_count FROM ( SELECT count(*) AS think_count FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ) `_group_count_` [ RunTime:0.001001s ]
+[2020-06-28T17:29:19+08:00][sql] SELECT `product_images`.`image_obj`,`product`.* FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ORDER BY `product`.`updated_at` DESC,`product_images`.`is_main` DESC LIMIT 0,7 [ RunTime:0.001000s ]
+[2020-06-28T17:29:23+08:00][sql] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:29:23+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:29:23+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.000000s ]
+[2020-06-28T17:29:35+08:00][sql] CONNECT:[ UseTime:0.010000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:29:35+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T17:29:35+08:00][sql] INSERT INTO `product` SET `company_id` = 1 , `name` = '爱的啊' , `category_id` = 0 , `updated_at` = '2020-06-28 17:29:35' , `created_at` = '2020-06-28 17:29:35' [ RunTime:0.001001s ]
+[2020-06-28T17:29:35+08:00][sql] SHOW FULL COLUMNS FROM `product` [ RunTime:0.001000s ]
+[2020-06-28T17:29:35+08:00][sql] SHOW FULL COLUMNS FROM `product_attribute` [ RunTime:0.001000s ]
+[2020-06-28T17:29:35+08:00][sql] INSERT INTO `product_attribute` SET `marketing_sentence` = '的个而' , `promotion_sentence` = '而而ger' , `gift_sentence` = '个二个人个人' , `content` = '' [ RunTime:0.001000s ]
+[2020-06-28T17:29:35+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001000s ]
+[2020-06-28T17:29:54+08:00][sql] CONNECT:[ UseTime:0.010001s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:29:54+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:29:54+08:00][sql] INSERT INTO `product` SET `company_id` = 1 , `name` = '爱的爱的' , `category_id` = 0 , `updated_at` = '2020-06-28 17:29:54' , `created_at` = '2020-06-28 17:29:54' [ RunTime:0.001000s ]
+[2020-06-28T17:29:54+08:00][sql] SHOW FULL COLUMNS FROM `product` [ RunTime:0.001000s ]
+[2020-06-28T17:29:54+08:00][sql] SHOW FULL COLUMNS FROM `product_attribute` [ RunTime:0.001000s ]
+[2020-06-28T17:29:54+08:00][sql] INSERT INTO `product_attribute` SET `marketing_sentence` = '案发时发af' , `promotion_sentence` = '啊发发顺丰a' , `gift_sentence` = '阿发发顺丰a' , `content` = '' [ RunTime:0.000000s ]
+[2020-06-28T17:30:19+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:30:19+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:30:19+08:00][sql] INSERT INTO `product` SET `company_id` = 1 , `name` = '爱的爱的' , `category_id` = 0 , `updated_at` = '2020-06-28 17:30:19' , `created_at` = '2020-06-28 17:30:19' [ RunTime:0.001000s ]
+[2020-06-28T17:30:19+08:00][sql] SHOW FULL COLUMNS FROM `product` [ RunTime:0.001000s ]
+[2020-06-28T17:30:19+08:00][sql] SHOW FULL COLUMNS FROM `product_attribute` [ RunTime:0.001001s ]
+[2020-06-28T17:30:19+08:00][sql] INSERT INTO `product_attribute` SET `marketing_sentence` = '案发时发af' , `promotion_sentence` = '啊发发顺丰a' , `gift_sentence` = '阿发发顺丰a' , `content` = '' [ RunTime:0.001000s ]
+[2020-06-28T17:30:20+08:00][sql] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:30:20+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T17:30:20+08:00][sql] SELECT * FROM `product` WHERE  `id` = 27 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T17:30:20+08:00][sql] SHOW FULL COLUMNS FROM `product_images` [ RunTime:0.001000s ]
+[2020-06-28T17:30:20+08:00][sql] SELECT `image_obj` FROM `product_images` WHERE  `product_id` = 27 ORDER BY `is_main` DESC [ RunTime:0.001000s ]
+[2020-06-28T17:30:20+08:00][sql] SHOW FULL COLUMNS FROM `product_attribute` [ RunTime:0.001000s ]
+[2020-06-28T17:30:20+08:00][sql] SELECT * FROM `product_attribute` WHERE  `product_id` = 27 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T17:30:20+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001000s ]
+[2020-06-28T17:31:08+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:31:08+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:31:08+08:00][sql] SELECT * FROM `product` WHERE  `id` = 27 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:31:08+08:00][sql] SHOW FULL COLUMNS FROM `product_images` [ RunTime:0.002000s ]
+[2020-06-28T17:31:08+08:00][sql] SELECT `image_obj` FROM `product_images` WHERE  `product_id` = 27 ORDER BY `is_main` DESC [ RunTime:0.001000s ]
+[2020-06-28T17:31:08+08:00][sql] SHOW FULL COLUMNS FROM `product_attribute` [ RunTime:0.001000s ]
+[2020-06-28T17:31:08+08:00][sql] SELECT * FROM `product_attribute` WHERE  `product_id` = 27 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:31:08+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001000s ]
+[2020-06-28T17:31:20+08:00][sql] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:31:20+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.000000s ]
+[2020-06-28T17:31:20+08:00][sql] SELECT * FROM `product` WHERE  `id` = 27 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:31:20+08:00][sql] SHOW FULL COLUMNS FROM `product_images` [ RunTime:0.001000s ]
+[2020-06-28T17:31:20+08:00][sql] SELECT `image_obj` FROM `product_images` WHERE  `product_id` = 27 ORDER BY `is_main` DESC [ RunTime:0.000000s ]
+[2020-06-28T17:31:20+08:00][sql] SHOW FULL COLUMNS FROM `product_attribute` [ RunTime:0.001000s ]
+[2020-06-28T17:31:20+08:00][sql] SELECT * FROM `product_attribute` WHERE  `product_id` = 27 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:31:20+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001000s ]
+[2020-06-28T17:31:24+08:00][sql] CONNECT:[ UseTime:0.011000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:31:24+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:31:24+08:00][sql] SELECT COUNT(*) AS think_count FROM ( SELECT count(*) AS think_count FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ) `_group_count_` [ RunTime:0.001000s ]
+[2020-06-28T17:31:24+08:00][sql] SELECT `product_images`.`image_obj`,`product`.* FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ORDER BY `product`.`updated_at` DESC,`product_images`.`is_main` DESC LIMIT 0,7 [ RunTime:0.001001s ]
+[2020-06-28T17:31:25+08:00][sql] CONNECT:[ UseTime:0.001000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:31:25+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:31:25+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001000s ]
+[2020-06-28T17:31:51+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:31:51+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:31:51+08:00][sql] SELECT * FROM `product_category` ORDER BY `updated_at` DESC LIMIT 100 [ RunTime:0.001000s ]
+[2020-06-28T17:34:20+08:00][sql] CONNECT:[ UseTime:0.003000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:34:20+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:34:20+08:00][sql] SELECT COUNT(*) AS think_count FROM ( SELECT count(*) AS think_count FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ) `_group_count_` [ RunTime:0.001000s ]
+[2020-06-28T17:34:20+08:00][sql] SELECT `product_images`.`image_obj`,`product`.* FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ORDER BY `product`.`updated_at` DESC,`product_images`.`is_main` DESC LIMIT 0,7 [ RunTime:0.001000s ]
+[2020-06-28T17:35:38+08:00][sql] CONNECT:[ UseTime:0.002000s ] mysql:host=127.0.0.1;port=3306;dbname=holiday;charset=utf8
+[2020-06-28T17:35:38+08:00][sql] SELECT * FROM `web_config` WHERE  `company_id` = 1 LIMIT 1 [ RunTime:0.001000s ]
+[2020-06-28T17:35:38+08:00][sql] SELECT COUNT(*) AS think_count FROM ( SELECT count(*) AS think_count FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ) `_group_count_` [ RunTime:0.001000s ]
+[2020-06-28T17:35:38+08:00][sql] SELECT `product_images`.`image_obj`,`product`.* FROM `product` LEFT JOIN `product_images` ON `product_images`.`product_id`=`product`.`id` WHERE  ( 1=1 ) GROUP BY `product`.`id` ORDER BY `product`.`updated_at` DESC,`product_images`.`is_main` DESC LIMIT 0,7 [ RunTime:0.001000s ]

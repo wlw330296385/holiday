@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta content="telephone=no" name="format-detection">
+		<meta name="description" content="{$setting->description}联系电话:{$setting->contact->phone}">
+		<meta name="keyword" content="{$setting->keyword}联系电话:{$setting->contact->phone}">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<title>{$setting->title}联系电话:{$setting->contact->phone}</title>
+		<link rel="stylesheet" type="text/css" href="/static/frontend/css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/frontend/css/style.css?v={:time()}"/>
+		<link rel="stylesheet" type="text/css" href="/static/css/style.css?v={:time()}"/>
+
+		<script type="text/javascript" src="/static/frontend/js/jquery1.11.3.min.js"></script>
+		<script type="text/javascript" src="/static/frontend/js/index.js"></script>
+
+		<link rel="stylesheet" href="/static/backend/layui/css/layui.css">
+		<script src="/static/backend/layui/layui.js"></script>
+	</head>
+	<body>
+		<!--top-->
+		<div id="top">
+			<div class="header">
+				<span>欢迎来到{$setting->company_name}官方网站</span>
+				<span ><a href="">网站地图</a></span>
+			</div>
+			<div id="header_image" style=""></div>
+			<div class="wrap clearfloat" id="nav">
+				<div>
+					<ul class="clearfloat">
+						<li {if request()->action() == 'index'} class="active" {/if}>
+							<a href="{:url('index/index')}">&nbsp;&nbsp;&nbsp;首页&nbsp;&nbsp;&nbsp;</a>
+						</li>
+						<li {if request()->action() == 'show' && input('get.c') == 3} class="active" {/if}>
+							<a href="{:url('index/show',['c'=>3])}">盘子</a>
+						</li>
+                        <li {if request()->action() == 'show' && input('get.c') == 1} class="active" {/if}>
+							<a href="{:url('index/show',['c'=>1])}">餐盒</a>
+						</li>
+                        <li {if request()->action() == 'show' && input('get.c') == 11} class="active" {/if}>
+							<a href="{:url('index/show',['c'=>11])}">西餐盒</a>
+						</li>
+						<li {if request()->action() == 'show' && !in_array(input('get.c'),[1,2,3,11,36])} class="active" {/if}>
+							<a href="{:url('index/show')}">产品中心 </a>
+							<!-- <div class="navDown">
+								<a href="">快餐盒系列</a>
+								<a href="">杯子系列</a>
+								<a href="">品牌定制案例</a>
+							</div> -->
+						</li>
+						<li {if request()->action() == 'news'} class="active" {/if}>
+							<a href="{:url('index/news')}">资讯中心</a>
+<!--							<div class="navDown">-->
+<!--								<a href="">行业新闻</a>-->
+<!--								<a href="javascript:">餐饮知识</a>-->
+<!--							</div>-->
+<!--							<div class="navBtn"></div>-->
+						</li>
+						<li {if request()->action() == 'about'} class="active" {/if}>
+							<a href="{:url('index/about')}">关于我们</a>
+<!--							<div class="navDown">-->
+<!--								<a href="{:url('index/about')}">公司简介</a>-->
+<!--								<a href="javascript:">企业文化</a>-->
+<!--								<a href="javascript:">公司荣誉</a>-->
+<!--							</div>-->
+<!--							<div class="navBtn"></div>-->
+						</li>
+						<!-- <li>
+							<a href="{:url('index/issue')}">常见问题</a>
+							<div class="navDown">
+								<a href="{:url('index/issue')}">常见问题</a>
+							</div>
+							<div class="navBtn"></div>
+						</li>-->
+						<!-- <li>
+							<a href="{:url('index/sample')}">样品领取</a>
+						</li> -->
+						<li {if request()->action() == 'contact'} class="active" {/if}>
+							<a href="{:url('index/contact')}">联系我们</a>
+						</li>
+					</ul>
+				</div>
+				<!-- <div class="topPhone clearfloat">
+					<div class="pic"><img src="/static/frontend/images/icon_phone.png"/></div>
+					<div class="cont">
+						<h3>24小时咨询热线</h3>
+						<p>{$setting->contact->company_phone}</p>
+					</div>
+				</div> -->
+			</div>
+
+			<div class="muen">
+				<span class="muenX"></span>
+				<span class="muenY"></span>
+				<span class="muenZ"></span>
+			</div>
+
+
+		</div>
+		<!--/top-->

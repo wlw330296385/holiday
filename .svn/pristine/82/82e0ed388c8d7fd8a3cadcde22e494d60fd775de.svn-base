@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0431dfde-8a91-4a6b-8a66-269bef2a17da" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/controller/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/controller/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/middleware.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/middleware.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Banner.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Banner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/News.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/News.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/model/WebConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/model/WebConfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/index1 (1).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/index1 (2).html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/issue.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/issue.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/layout/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/layout/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/layout/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/layout/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/news-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/news-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/news.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/product.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/product.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/sample.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/sample.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/show-detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/show-detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/view/index/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/view/index/show.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/filesystem.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/filesystem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/.github/FUNDING.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/.github/FUNDING.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/.github/ISSUE_TEMPLATE.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/.github/ISSUE_TEMPLATE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/TODO.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/TODO.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/lerna.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/lerna.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/.nycrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/config/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/config/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/config/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/config/rollup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/demo/demo-amd.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/demo/demo-amd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/demo/demo-global.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/demo/demo-global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/demo/demo-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/demo/demo-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/demo/js/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/demo/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/example/base/demo.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/example/base/demo.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/example/base/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/example/base/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/example/base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/example/base/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/example/base/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/example/base/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/example/base/template.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/example/base/template.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/jslib.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/jslib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/test/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/test/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/browserify-templatejs/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/.nycrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/config/rollup.config.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/config/rollup.config.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/config/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/config/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/config/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/config/rollup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/demo/demo-amd.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/demo/demo-amd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/demo/demo-global.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/demo/demo-global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/demo/demo-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/demo/demo-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/demo/js/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/demo/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis2/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis2/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis2/fis-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis2/fis-conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis2/template.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis2/template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis2/test.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis2/test.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis3/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis3/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis3/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis3/fis-conf.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis3/fis-conf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis3/template.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis3/template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis3/test.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/example/fis3/test.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/jslib.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/jslib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/test/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/test/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/fis-parser-template/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/.nycrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/config/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/config/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/config/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/config/rollup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/demo/demo-amd.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/demo/demo-amd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/demo/demo-global.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/demo/demo-global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/demo/demo-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/demo/demo-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/demo/js/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/demo/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/example/base/gulpfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/example/base/gulpfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/example/base/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/example/base/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/example/base/src/test.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/example/base/src/test.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/jslib.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/jslib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/test/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/test/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/gulp-templatejs/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/.nycrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/config/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/config/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/config/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/config/rollup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/demo/demo-amd.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/demo/demo-amd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/demo/demo-global.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/demo/demo-global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/demo/demo-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/demo/demo-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/demo/js/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/demo/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/example/base/demo.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/example/base/demo.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/example/base/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/example/base/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/example/base/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/example/base/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/example/base/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/example/base/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/example/base/template.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/example/base/template.config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/jslib.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/jslib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/src/template.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/src/template.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/test/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/test/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parcel-plugin-template/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/.nycrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/config/rollup.config.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/config/rollup.config.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/config/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/config/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/config/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/config/rollup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/demo/demo-amd.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/demo/demo-amd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/demo/demo-global.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/demo/demo-global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/demo/demo-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/demo/demo-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/demo/js/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/demo/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/jslib.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/jslib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/test/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/test/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/parser/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/parser/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.nycrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/config/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/config/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/config/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/config/rollup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/demo/demo-amd.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/demo/demo-amd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/demo/demo-global.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/demo/demo-global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/demo/demo-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/demo/demo-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/demo/js/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/demo/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/jslib.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/jslib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/test/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/test/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/precompiler/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.nycrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/config/rollup.config.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/config/rollup.config.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/config/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/config/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/config/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/config/rollup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/demo/demo-amd.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/demo/demo-amd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/demo/demo-global.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/demo/demo-global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/demo/demo-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/demo/demo-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/demo/js/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/demo/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/example/base/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/example/base/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/example/base/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/example/base/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/example/base/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/example/base/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/example/base/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/example/base/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/example/base/test.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/example/base/test.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/jslib.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/jslib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/test/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/test/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/rollup-plugin-templatejs/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.nycrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/config/rollup.config.aio.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/config/rollup.config.aio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/config/rollup.config.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/config/rollup.config.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/config/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/config/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/config/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/config/rollup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/demo/demo-amd.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/demo/demo-amd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/demo/demo-global.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/demo/demo-global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/demo/demo-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/demo/demo-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/demo/js/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/demo/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/jslib.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/jslib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/test/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/test/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/runtime/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/runtime/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/.nycrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/config/rollup.config.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/config/rollup.config.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/config/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/config/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/config/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/config/rollup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/demo/demo-amd.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/demo/demo-amd.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/demo/demo-global.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/demo/demo-global.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/demo/demo-node.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/demo/demo-node.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/demo/js/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/demo/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/basic/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/basic/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/basic/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/basic/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/basic/demo.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/basic/demo.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/basic/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/basic/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/demo.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/demo.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack1/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/demo.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/demo.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack2/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/demo.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/demo.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack3/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/demo.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/demo.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/example/local-webpack4/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/jslib.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/jslib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/test/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/test/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template-loader/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/.babelrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/.eslintrc.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/.eslintrc.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/.nycrc" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/.nycrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/config/rollup.config.aio.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/config/rollup.config.aio.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/config/rollup.config.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/config/rollup.config.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/config/rollup.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/config/rollup.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/config/rollup.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/config/rollup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/child-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/child-template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/config.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/js/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/registerFunction.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/registerFunction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/registerModifier.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/registerModifier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/requirejs.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/demo/requirejs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/jslib.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/jslib.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/test/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/test/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/packages/template/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/packages/template/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/.npmignore" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/.npmignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/.travis.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/MIT-LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/MIT-LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/README.zh-CN.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/README.zh-CN.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/demo/basic.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/demo/basic.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/demo/child-template.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/demo/child-template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/demo/config.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/demo/config.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/demo/js/require.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/demo/js/require.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/demo/node/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/demo/node/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/demo/registerFunction.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/demo/registerFunction.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/demo/registerModifier.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/demo/registerModifier.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/demo/requirejs.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/demo/requirejs.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/doc/api.md" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/doc/api.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/temp.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/temp.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/template.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/browser/expect.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/browser/expect.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/browser/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/browser/mocha.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/browser/mocha.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/browser/mocha.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/browser/mocha.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/compile-error.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/compile-error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/compile-time.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/compile-time.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/joinVSconcat.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/joinVSconcat.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/artTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/artTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/baiduTemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/baiduTemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/doT.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/doT.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/easytemplate.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/easytemplate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/etpl.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/etpl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/handlebars.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/handlebars.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/highcharts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/highcharts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/jquery-1.7.2.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/jquery-1.7.2.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/jquery.tmpl.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/jquery.tmpl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/juicer.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/juicer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/kissy.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/kissy.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/mustache.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/mustache.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.1.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.1.0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.2.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.2.0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.3.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.3.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.4.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.4.0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.5.0.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.5.0.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.6.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.6.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.7.1.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template-0.7.1.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/template.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/tmpl.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/tmpl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/js/underscore.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/js/underscore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/render-error.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/render-error.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/render-time.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/render-time.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/speed1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/speed1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/speed2.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/speed2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/speed3.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/speed3.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/speed4.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/speed4.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/v1/test/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/v1/test/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/static/template.js/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/public/static/template.js/yarn.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/topthink/framework" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-orm" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-helper" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-trace" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem-cached-adapter" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-view" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-template" />
+      <path value="$PROJECT_DIR$/vendor/topthink/think-captcha" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1d1G02W9FuFvlfQo0YXVMNthitU" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/static/js" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\tpholidaytp\public\static\js" />
+      <recent name="F:\tpholidaytp\app\controller" />
+      <recent name="F:\tpholidaytp" />
+      <recent name="F:\tpholidaytp\view" />
+    </key>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0431dfde-8a91-4a6b-8a66-269bef2a17da" name="Default Changelist" comment="" />
+      <created>1591584958664</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591584958664</updated>
+      <workItem from="1591584968535" duration="13747000" />
+      <workItem from="1591666960163" duration="2040000" />
+      <workItem from="1591751833800" duration="6066000" />
+      <workItem from="1591768173240" duration="11514000" />
+      <workItem from="1591840020462" duration="59000" />
+      <workItem from="1591844743916" duration="6141000" />
+      <workItem from="1591862815865" duration="5244000" />
+      <workItem from="1591924256562" duration="15653000" />
+      <workItem from="1592201540117" duration="11110000" />
+      <workItem from="1592274475267" duration="11054000" />
+      <workItem from="1592363489135" duration="5744000" />
+      <workItem from="1592444634251" duration="14439000" />
+      <workItem from="1592530141903" duration="2752000" />
+      <workItem from="1592537852025" duration="17593000" />
+      <workItem from="1592621487424" duration="13160000" />
+      <workItem from="1592797189331" duration="3502000" />
+      <workItem from="1592876981160" duration="6811000" />
+      <workItem from="1592891507635" duration="9748000" />
+      <workItem from="1592961764815" duration="11485000" />
+      <workItem from="1593312884592" duration="7564000" />
+      <workItem from="1593401690038" duration="3363000" />
+      <workItem from="1593495320734" duration="1200000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="429" y="98" width="678" height="772" key="find.popup" timestamp="1592986704721">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state x="429" y="98" width="678" height="772" key="find.popup/0.0.1440.870@0.0.1440.870" timestamp="1592986704721" />
+    <state x="359" y="201" key="run.anything.popup" timestamp="1592447884989">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state x="359" y="201" key="run.anything.popup/0.0.1440.870@0.0.1440.870" timestamp="1592447884989" />
+    <state x="363" y="191" width="672" height="678" key="search.everywhere.popup" timestamp="1592966038881">
+      <screen x="0" y="0" width="1440" height="870" />
+    </state>
+    <state x="363" y="191" width="672" height="678" key="search.everywhere.popup/0.0.1440.870@0.0.1440.870" timestamp="1592966038881" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/view/admin/news.html</url>
+          <line>56</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

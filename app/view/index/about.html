@@ -1,96 +1,4 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta content="telephone=no" name="format-detection">  
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-		<title>关于我们</title>
-		<link rel="stylesheet" type="text/css" href="/static/frontend/css/public.css"/>
-		<link rel="stylesheet" type="text/css" href="/static/frontend/css/jquery.bxslider.css"/>
-		<link rel="stylesheet" type="text/css" href="/static/frontend/css/style.css"/>
-		
-		<script type="text/javascript" src="/static/frontend/js/jquery1.11.3.min.js"></script>
-		<script type="text/javascript" src="/static/frontend/js/jquery.bxslider.min.js"></script>
-		<script type="text/javascript" src="/static/frontend/js/index.js"></script>
-	</head>
-	<body class="bgeee">
-		<!--top-->
-		<div id="top">
-			<img style="width: 100%; height: 120px" src="/static/frontend/images/header1.jpg" alt="">
-
-			<div class="wrap clearfloat">
-				<div class="logo">
-<!--					<a href="index.html"><img src="/static/frontend/images/logo.png"/></a>-->
-				</div>
-				<div id="nav">
-					<ul class="clearfloat">
-						<li>
-							<a href="{:url('index/index')}">首页</a>
-						</li>
-						<li>
-							<a href="{:url('index/product')}">生产工艺</a>
-						</li>
-                        <li>
-							<a href="{:url('index/show',['m'=>1])}">主要产品</a>
-						</li>
-						<li>
-							<a href="{:url('index/show')}">全部产品 </a>
-							<div class="navDown">
-								<a href="{:url('index/show')}">快餐盒系列</a>
-								<a href="javascript:">杯子系列</a>
-								<a href="javascript:">品牌定制案例</a>
-							</div>
-							<div class="navBtn"></div>
-						</li>
-						<li>
-							<a href="{:url('index/news')}">资讯中心</a>
-							<div class="navDown">
-								<a href="{:url('index/news')}">行业新闻</a>
-								<a href="javascript:">餐饮知识</a>
-							</div>
-							<div class="navBtn"></div>
-						</li>
-						<li class="active" >
-							<a href="{:url('index/about')}">关于我们</a>
-							<div class="navDown">
-								<a href="{:url('index/about')}">公司简介</a>
-								<a href="javascript:">企业文化</a>
-								<a href="javascript:">公司荣誉</a>
-							</div>
-							<div class="navBtn"></div>
-						</li>
-						<!-- <li>
-							<a href="{:url('index/issue')}">常见问题</a>
-							<div class="navDown">
-								<a href="{:url('index/issue')}">常见问题</a>
-							</div>
-							<div class="navBtn"></div>
-						</li>-->
-						<!-- <li>
-							<a href="{:url('index/sample')}">样品领取</a>
-						</li> -->
-						<li>
-							<a href="{:url('index/contact')}">联系我们</a>
-						</li>
-					</ul>
-				</div>
-				<!-- <div class="topPhone clearfloat">
-					<div class="pic"><img src="/static/frontend/images/icon_phone.png"/></div>
-					<div class="cont">
-						<h3>24小时咨询热线</h3>
-						<p>{$setting->contact->company_phone}</p>
-					</div>
-				</div> -->
-			</div>
-			
-			<div class="muen">
-				<span class="muenX"></span>
-				<span class="muenY"></span>
-				<span class="muenZ"></span>
-			</div>
-		</div>
-		<!--/top-->
+{include file="index/layout/header" /}
 		
 		<div class="bannerBox bannerAbout"><div class="bg"></div></div>
 		<div class="wrap clearfloat">
@@ -148,7 +56,7 @@
 						</li>
 					</ul>
 					<div class="aboutEwm">
-						<img src="/static/frontend/images/{$setting.qrcode_obj}"/>
+						<img src="{$setting.qrcode_url}"/>
 					</div>
 				</div>
 				
@@ -163,26 +71,80 @@
 				</div>
 				<div class="aboutRW clearfloat">
 					<div class="pic aboutPic"><img src="/static/frontend/temp/about_r_img.jpg"/></div>
-					<h3>深圳华利达</h3>
+					<h3>{$setting->company_name}</h3>
 					<p>
-						公司成立于2014年，是一家集研发、生产和销售于一体的多元化综合性企业。各类产品畅销市场，与多家零售商和代理商建立了长期稳定的合作关系，在行业中享有较高的地位。
+						深圳华利达包装展示有限公司是一家专业环保包装展示制品工贸企业;自2010年成立以来，业
+						务领域快速发展并跨越北美、拉美、南美、大洋洲、欧洲、亚洲等区域；<br>
+						直接或间接参与并完成过多家世界500强品牌的环保包装方案与实施；<br>
+						并且与多家国内外知名学府产研合作包括福建师范大学、湖南科技大学、美国杜兰大学等等；<br>
+						公司组织架构完整：包括主要9大部门（采购、运营、销售、客服、研发、工程、财务、行政、
+						战略规划等）；<br>
+						大学及以上学历人员占比90%，多名10年以上销售顾问、品管、研发工程等
+						服务:以国际标准服务客户，最好的服务给最可爱的客户。<br>
+						<strong>“大卖盒”</strong>采用多种包装陈列运输方式，以我们的用心给购买的客户带来愉悦乐趣享受。<br>
+						主要有
+						五大类40余个品种纸浆模塑环保餐具，盘类*11，碗类*9，杯类*7，托盘*4，盒类*9。<br>
+						主要具有时尚精致、紫外杀菌、0添加无毒、防油防烫手、可微波和冷藏、结实抗压等特点；<br>
+						以成为优秀环境友好食物包装引领者为目标，以使外卖食品健康环保为使命不断创新；<br>
+						以  <strong>“大卖盒”</strong>进入全民就餐娱乐首先为愿景，不断加强与合作伙伴协作；<br>
+						本产品可用在聚会、野餐、烧烤、会议、宴会、餐厅、外卖打包、分餐、糕点房等场所。<br>
 					</p>
 					<p>
-						企业拥有完善的生产工厂、先进齐全的各种生产设备、占总人数70%以上的高级技术专业人员，及专业的设计团队，是深圳先进重质量，守信誉单位。企业自创建以来，不断适应市场需求，更新设备，在满足您个性化定制需求的同时，为商家客户提供满意、一流、专业的产品和服务。
+						工艺概况特征：<br>
+						纸浆模塑环保餐具以天然麦草/甘蔗浆为原料，经科学技术处理，使之具备以下特征：<br>
+						1、紫外杀菌，安全卫生、<br>
+						2、100%原生浆餐具，0添加无毒无害；<br>
+						3、可抗120℃热油、抗100℃热水，不变形不渗漏、<br>
+						4、适合微波炉烘烤、冰箱冷冻、<br>
+						5、有回收价值，再生造纸，循环利用，保护资源、<br>
+						6、变异后自然降解泥化为有机肥料，还原为二氧化碳与水，回归大自然、<br>
+						7、产品经喷涂、覆膜后可提高其阻隔透气性、<br>
+						8、加厚材料，冷藏微波时稳定不易变形。<br>
 					</p>
 					<p>
-						企业以严格控制产品质量，使产品达到国际标准，坚持“商道以人为本，产品以质量为本”“以创新求发展，以管理求效益”之企业宗旨，奉行“市场来自质量，信誉重于泰山”之经营理念，诚挚欢迎海内外客商莅临参观，洽谈合作！
+						产品概况<br>
+						目前我公司现有纸浆模塑环保餐具五大类34个品种：<br>
+						1、盘类（主要用于盛放炒菜等）：6寸盘，7寸盘，8寸盘，10寸圆盘，10寸3格圆盘，小椭圆盘，<br>
+						7寸澳洲圆盘，9寸三格圆盘，9寸圆盘，中椭圆盘，大椭圆盘；<br>
+						2、碗类（主要用于盛放汤、面条、咖啡等）：500ML碗，340ML碗，7寸碗，6寸碗，350ML碗，<br>
+						400ML碗，350ML卷边碗；<br>
+						3、杯类（主要用于盛放咖啡，汤，冰淇淋等）：500ML杯，500ML杯盖，425ML杯，425ML杯盖，<br>
+						140ML杯，260ML杯，370ML杯；<br>
+						4、托盘类（主要用于盛放蔬菜水果，肉类等）：美国托盘，350ml托盘；<br>
+						5、盒类（主要用于快餐店打包）：600ML餐盒，1000ML双格餐盒，450ML汉堡盒，450ML餐盒，<br>
+						9寸大盒，8寸大盒，10寸大盒。<br>
+						纸浆模塑产品可根据客户需求进行开发新的模具，生产新的品种。我公司拥有强大的模具开发能力，<br>
+						所能开发的产品以餐饮用具为主，完全可以按照不同客户<br>
+						需求生产不同克重，规格，样式的产品。<br>
+					</p>
+					<p>
+						售卖方式<br>
+						注意盖子和盒底是分开包装、选购的<br>
+						1、50pcs/袋，300-500pcs/箱<br>
+						2、包装盒装48pcs/60pcs/100/盒<br>
+						3、展示盒多种产品混装（适用线下、线上销售）<br>
+						4、展示架多种产品混装（适用商超、便利店、商业场所）<br>
+					</p>
+					<p>
+						客户对象<br>
+						1、餐饮连锁<br>
+						2、酒店航空<br>
+						3、国内贸易商<br>
+						4、国内出口商<br>
+						5、国外进口商<br>
+						6、国外商家<br>
+						7、国内外供应链<br>
 					</p>
 				</div>
 				<div class="aboutRInner clearfloat">
 					<div class="aboutRInnerWrit">
-						<h2>与众不同的风格</h2>
-						<h3>DIFFERENT STYLE</h3>
+						<h2>售卖方式</h2>
+						<h3>注意盖子和盒底是分开包装、选购的</h3>
 						<p>
-							找不到千篇一律的理由<br />
-							无论是早已厌倦的工作，还是枯燥无味的生活<br />
-							你的态度决定你的高度<br />
-							精彩的、新颖的，只属于你的选择
+							1、50pcs/袋，300-500pcs/箱 <br>
+							2、包装盒装48pcs/60pcs/100/盒<br>
+							3、展示盒多种产品混装（适用线下、线上销售）<br>
+							4、展示架多种产品混装（适用商超、便利店、商业场所）<br>
 						</p>
 					</div>
 					<div class="aboutRInnerPic">
@@ -193,60 +155,5 @@
 			
 		</div>
 		
-		<!--footer-->
-		<div id="footer">
-			<div class="wrap clearfloat">
-				<div class="left footerZx">
-					<a href="" class="footerZxH">
-						<span><img src="/static/frontend/images/icon_footer_zx.png"/></span>在线咨询
-					</a>
-					<div class="footerZxPhone">
-						<h3>咨询热线：</h3>
-						<p>{$setting->contact->company_phone}</p>
-					</div>
-					<p class="footerCopy">{$setting.copyright}</p>
-				</div>
-				<div class="left footerEwm">
-					<div class="pic"><img src="/static/frontend/temp/ewm.jpg"/></div>
-					<p>手机扫一扫</p>
-				</div>
-				<ul class="clearfloat">
-					<li>
-						<h3>关于我们</h3>
-						<p><a href="">公司简介</a></p>
-						<p><a href="">企业文化</a></p>
-						<p><a href="">公司荣誉</a></p>
-					</li>
-					<li>
-						<h3>生产工艺</h3>
-						<p><a href="">印刷图文</a></p>
-					</li>
-					<li>
-						<h3>全部产品</h3>
-						<p><a href="">单格餐盒</a></p>
-						<p><a href="">双格餐盒</a></p>
-						<p><a href="">三格餐盒</a></p>
-					</li>
-					<li>
-						<h3>资讯中心</h3>
-						<p><a href="">行业新闻</a></p>
-						<p><a href="">餐饮知识</a></p>
-						<p><a href="">常见问题</a></p>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!--/footer-->
-		
-		<!--wap-->
-		<div class="wapBottom">
-			<ul class="clearfloat">
-				<li><a href="index.html">首页</a></li>
-				<li><a href="about.html">关于我们</a></li>
-				<li><a href="tel:13366668888">电话咨询</a></li>
-				<li><a href="contact.html">联系我们</a></li>
-			</ul>
-		</div>
-		<!--/wap-->
-	</body>
+{include file="index/layout/footer" /}
 </html>

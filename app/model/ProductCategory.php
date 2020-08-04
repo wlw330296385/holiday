@@ -25,9 +25,33 @@ class ProductCategory extends Model
         //TODO:初始化内容
     }
 
-    public function find_rows($num = 100){
+    // 向下获取category_id
+    public function find_all_ids(int $m = 0) {
+        return  $this::where(['pid' => $m])->whereOr('id', $m)-> column('id');
+    }
 
-        $list = $this::order(['updated_at'=>'desc']) -> limit($num) -> select() -> toArray();
+    // 向上获取category_id和同类
+    public function find_all_pids(int $m = 0) {
+        return  $this::where(['pid' => $m])->whereOr('id', $m)-> column('id');
+    }
+
+    public function find_rows(int $num = 100, array $ids = null){
+        if ($ids) {
+            $list = $this::where('id','in', $ids) -> order(['pid'=>'DESC', 'id' => 'asc']) -> limit($num) -> select() -> toArray();
+        } else {
+            $list = $this::where('pid', 0) ->order(['id'=>'asc']) -> limit($num) -> select() -> toArray();
+        }
+        // $result = tree($list);
+        return $list;
+    }
+
+    public function find_trees(int $num = 100, array $ids = null){
+
+        if ($ids) {
+            $list = $this::where('id','in', $ids) -> order(['pid'=>'DESC', 'id' => 'asc']) -> limit($num) -> select() -> toArray();
+        } else {
+            $list = $this::order(['id'=>'asc']) -> limit($num) -> select() -> toArray();
+        }
         $result = tree($list);
         return $result;
     }

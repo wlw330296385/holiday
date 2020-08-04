@@ -1,0 +1,90 @@
+{include file="index/layout/header" /}
+		<div class="bannerBox bannerNews"><div class="bg"></div></div>
+		
+		<div class="wrap clearfloat">
+			<div class="aboutL">
+				<!--<span class="BtnL"></span>-->
+				<div class="aboutH">
+					<h3>NEWS CENTER</h3>
+					<h2>资讯中心</h2>
+				</div>
+				<ul class="aboutNav">
+					<li class="on"><a href="javascript:">
+						行业新闻  <span class="jtAbout"></span>
+					</a></li>
+					<li><a href="javascript:">
+						餐饮知识 <span class="jtAbout"></span>
+					</a></li>
+				</ul>
+				<div class="aboutLAd">
+					<a href=""><div class="pic"><img src="/static/frontend/temp/about_l_img.jpg"/></div></a>
+				</div>
+				<div class="aboutContact">
+					<div class="aboutContactH">
+						<h2>联系我们</h2>
+					</div>
+					<ul>
+						<li>
+							<span><img src="/static/frontend/images/about_phone.png"/></span>
+							<em>电话：</em>
+							<p>{$setting->contact->company_phone}</p>
+						</li>
+						<li>
+							<span><img src="/static/frontend/images/about_tel.png"/></span>
+							<em>手机：</em>
+							<p>{$setting->contact->phone}</p>
+						</li>
+						<li>
+							<span><img src="/static/frontend/images/about_mail.png"/></span>
+							<em>邮箱：</em>
+							<p>{$setting->contact->email}</p>
+						</li>
+						<li>
+							<span><img src="/static/frontend/images/about_position.png"/></span>
+							<em>地址：</em>
+							<p>{$setting.location}</p>
+						</li>
+						<li>
+							<span><img src="/static/frontend/images/about_weixin.png"/></span>
+							<em>关注：</em>
+							<p>
+								关注微信最新动态
+							</p>
+						</li>
+					</ul>
+					<div class="aboutEwm">
+						<img src="{$setting.qrcode_url}"/>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="aboutR">
+				<div class="aboutRTop">
+					<p>您现在的位置：<a href="{:url('index/index')}">首页</a> &gt; <a href="">资讯中心</a> &gt; 行业新闻</p>
+				</div>
+				<div class="newsW">
+					<ul class="newsList">
+						{volist name = 'p_list' id = 'vol'}
+						<li class="clearfloat">
+							<div class="pic"><a href="{:url('index/news_detail',['id' => $vol['id']])}">
+								<img src="{$vol.cover_url}"/></a></div>
+							<div class="newsInner">
+								<h2 class="single-line"><a href="{:url('index/news_detail')}">{$vol.title}</a></h2>
+								<h3>{$vol.updated_at}</h3>
+								<p class="multi-line">{$vol.sub_title}</p>
+								<a class="more" href="{:url('index/news_detail',['id' => $vol['id']])}">查看详情</a>
+							</div>
+						</li>
+						{/volist}
+					</ul>
+					{$p_list|raw}
+					
+				</div>
+			
+			
+			</div>
+		</div>
+		
+{include file="index/layout/footer" /}
+</html>

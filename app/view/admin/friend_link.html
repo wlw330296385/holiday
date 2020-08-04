@@ -1,0 +1,88 @@
+{include file="admin/layout/header" /}
+  <div class="layui-body">
+    <div class="layui-container">
+      <fieldset class="layui-elem-field layui-field-title">
+        <legend>首页搜索关键词管理</legend>
+      </fieldset>
+      <blockquote class="layui-elem-quote layui-text">
+        官网内搜索
+      </blockquote>
+
+      <div style="padding: 20px; background-color: #F2F2F2;">
+        <div class="layui-row layui-col-space15">
+          <div class="layui-col-md6">
+            <div class="layui-card">
+              <div class="layui-card-header">手机版</div>
+              <div class="layui-card-body">
+                <img src="/static/backend/images/keyword1.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="layui-col-md6">
+            <div class="layui-card">
+              <div class="layui-card-header">电脑版</div>
+              <div class="layui-card-body">
+                <img src="/static/backend/images/keyword2.png" alt="" width="400px">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="layui-form layui-form-pane1" action="" lay-filter="first" method="post">
+          {volist name="list" id="vol"}
+          <div class="layui-form-item">
+            <label class="layui-form-label">网站名称</label>
+            <div class="layui-input-block">
+              <input type="text" name="name[]" value="{$vol.name}" lay-verify="required|len4" lay-reqText="网站名称不能超过4个字" required placeholder="百度" autocomplete="off" class="layui-input" >
+
+            </div>
+            <label class="layui-form-label">网址</label>
+            <div class="layui-input-block">
+              <input type="text" name="url[]" value="{$vol.link_url}" lay-verify="required|url" lay-reqText="http://www.baidu.com" required placeholder="http://www.baidu.com" autocomplete="off" class="layui-input" >
+              <span class="layui-badge layui-bg-green">网页首页友情链接。</span>
+            </div>
+          </div>
+          {/volist}
+        <div class="layui-form-item">
+          <div class="layui-input-block">
+            <button type="submit" class="layui-btn" lay-submit="" lay-filter="">立即提交</button>
+          </div>
+        </div>
+    </form>
+    </div>
+    <br><br><br>
+
+  </div>
+
+    <script>
+
+      layui.use(['form', 'layedit', 'laydate', 'upload'], function(){
+        var form = layui.form
+                ,$ = layui.jquery
+                ,layer = layui.layer
+        //自定义验证规则
+        form.verify({
+          title: function(value){
+            if(value.length < 5){
+              return '标题也太短了吧';
+            }
+          }
+          ,len56: [/(.+){6,56}$/, '长度6-56']
+          ,len26: [/(.+){6,26}$/, '长度6-26']
+          ,len120: [/(.+){6,120}$/, '长度6-26']
+          ,len4: [/(.+){2,4}$/, '长度2-4']
+        });
+
+
+
+        //监听提交
+        form.on('submit(*)', function(data){
+          alert(JSON.stringify(data.field));
+          return 11;
+        });
+
+      });
+
+    </script>
+
+{include file="admin/layout/footer" /}

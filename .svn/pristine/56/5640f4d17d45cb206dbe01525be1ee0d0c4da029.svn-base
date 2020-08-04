@@ -1,0 +1,199 @@
+{include file="index/layout/header" /}
+		<div class="bannerBox bannerShow"><div class="bg"></div></div>
+		
+		<div class="wrap clearfloat">
+			<div class="aboutL">
+				<!--<span class="BtnL"></span>-->
+				<div class="aboutH">
+					<h3>PRODUCT SHOW</h3>
+					<h2>全部产品</h2>
+				</div>
+				<ul class="aboutNav">
+					<li class="on"><a href="javascript:">
+						快餐盒系列 <span class="jtAbout"></span>
+					</a></li>
+					<li><a href="javascript:">
+						杯子系列<span class="jtAbout"></span>
+					</a></li>
+					<li><a href="javascript:">
+						品牌定制案例 <span class="jtAbout"></span>
+					</a></li>
+				</ul>
+				<div class="aboutLAd">
+					<a href=""><div class="pic"><img src="/static/frontend/temp/about_l_img.jpg"/></div></a>
+				</div>
+				<div class="aboutContact">
+					<div class="aboutContactH">
+						<h2>联系我们</h2>
+					</div>
+					<ul>
+						<li>
+							<span><img src="/static/frontend/images/about_phone.png"/></span>
+							<em>电话：</em>
+							<p>{$setting->contact->company_phone}</p>
+						</li>
+						<li>
+							<span><img src="/static/frontend/images/about_tel.png"/></span>
+							<em>手机：</em>
+							<p>{$setting->contact->phone}</p>
+						</li>
+						<li>
+							<span><img src="/static/frontend/images/about_mail.png"/></span>
+							<em>邮箱：</em>
+							<p>{$setting->contact->email}</p>
+						</li>
+						<li>
+							<span><img src="/static/frontend/images/about_position.png"/></span>
+							<em>地址：</em>
+							<p>{$setting.location}</p>
+						</li>
+						<li>
+							<span><img src="/static/frontend/images/about_weixin.png"/></span>
+							<em>关注：</em>
+							<p>
+								关注微信最新动态
+							</p>
+						</li>
+					</ul>
+					<div class="aboutEwm">
+						<img src="{$setting.qrcode_url}"/>
+					</div>
+				</div>
+				
+			</div>
+			
+			<div class="aboutR">
+				<div class="aboutRTop">
+					<p>您现在的位置：<a href="{:url('index/index')}">首页</a> &gt; <a href="">全部产品</a> &gt; 1500ML一次性五格快餐盒</p>
+				</div>
+				<div class="showDetailW">
+					<div class="showDetailMain clearfloat">
+						
+						<div class="showWap">
+							<img class="bg" src="/static/frontend/temp/show_d_img1.jpg"/>
+							<div class="showPic">
+								<ul class="showSlider">
+									<li class="showImg1">
+										  <img src="/static/frontend/temp/show_d_img1.jpg"/>
+									</li>
+									<li class="showImg2">
+										  <img src="/static/frontend/temp/show_d_img2.jpg"/>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="showDetailMainCont">
+							<h2>1500ML一次性五格快餐盒</h2>
+							<h3>产品特点</h3>
+							<p>
+								实用性强，损耗低，比较丝印及传统贴标产品，不会存在翘标、掉标、破损、兼具有耐挤压、防水、防油、防发霉、耐摩擦、耐酸碱、可冷却和耐热功能，使标签在特殊情况下不易损坏和受渍等作用。可提高效率不需要人工贴标，省去再贴标的生产环节。
+							</p>
+							<div class="showDetailMainB clearfloat">
+								<a class="showDetailLqyp" href=""><span></span>领取样品</a>
+								<a class="showDetailZxzx" href=""><span></span>在线咨询</a>
+								<a class="showDetailZxgm" href=""><span></span>在线购买</a>
+							</div>
+						</div>
+					</div>
+					
+					<div class="showDetailInner">
+						<h2><span>商品详情</span></h2>
+						<div class="showDetailInnerW">
+							<div class="pic"><img src="/static/frontend/temp/show_detail_cont_img1.jpg"/></div>
+							<div class="pic"><img src="/static/frontend/temp/show_detail_cont_img2.jpg"/></div>
+							<div class="pic pic1"><img src="/static/frontend/temp/show_detail_cont_img3.jpg"/></div>
+							<div class="pic"><img src="/static/frontend/temp/show_detail_cont_img4.jpg"/></div>
+						</div>
+					</div>
+					
+					<div class="homeDzzxB">
+						<div class="homeDzzxBH showDetailBH clearfloat">
+							<div class="line"></div>
+							<div class="homeDzzxBHCont showDetailH">
+								<h3><span>相关商品</span></h3>
+							</div>
+							<div class="block"></div>
+						</div>
+						<div class="homeDzzxBW showDetailBW">
+							<ul class="sliderHomeDzzc sliderShowDetail clearfloat">
+								<li><a href="">
+									<div class="pic"><img src="/static/frontend/temp/show_detail_cont_list_img.jpg"/></div>
+									<p class="single-line">MGlaces</p>
+								</a></li>
+								<li><a href="">
+									<div class="pic"><img src="/static/frontend/temp/show_detail_cont_list_img.jpg"/></div>
+									<p class="single-line">MGlaces</p>
+								</a></li>
+								<li><a href="">
+									<div class="pic"><img src="/static/frontend/temp/show_detail_cont_list_img.jpg"/></div>
+									<p class="single-line">MGlaces</p>
+								</a></li>
+								<li><a href="">
+									<div class="pic"><img src="/static/frontend/temp/show_detail_cont_list_img.jpg"/></div>
+									<p class="single-line">MGlaces</p>
+								</a></li>
+								<li><a href="">
+									<div class="pic"><img src="/static/frontend/temp/show_detail_cont_list_img.jpg"/></div>
+									<p class="single-line">MGlaces</p>
+								</a></li>
+								<li><a href="">
+									<div class="pic"><img src="/static/frontend/temp/show_detail_cont_list_img.jpg"/></div>
+									<p class="single-line">MGlaces</p>
+								</a></li>
+								<li><a href="">
+									<div class="pic"><img src="/static/frontend/temp/show_detail_cont_list_img.jpg"/></div>
+									<p class="single-line">MGlaces</p>
+								</a></li>
+								<li><a href="">
+									<div class="pic"><img src="/static/frontend/temp/show_detail_cont_list_img.jpg"/></div>
+									<p class="single-line">MGlacesMGlacesMGlacesMGlaces</p>
+								</a></li>
+							</ul>
+						</div>
+					</div>
+					
+					
+				</div>
+				
+				
+			</div>
+			
+			
+			
+		</div>
+{include file="index/layout/footer" /}
+	<script type="text/javascript" src="/static/frontend/js/jquery.zoom.js"></script>
+	<script type="text/javascript">
+		$('.showImg1').zoom({"url": '/static/frontend/temp/show_d_img11.jpg'});
+		$('.showImg2').zoom({"url": '/static/frontend/temp/show_d_img22.jpg'});
+		
+	</script>
+	
+	<script type="text/javascript">
+		$('.showSlider').bxSlider({
+			'auto':false,
+			'controls':false,
+			'touchEnabled':true,
+			'pager':true,
+			'speed':1000,
+			'pause':2000,
+			
+		})
+		
+		$('.sliderShowDetail').bxSlider({
+			'auto':true,
+	    'controls':true,
+	    'touchEnabled':true,
+	    'pager':false,
+	    'speed':600,
+			'slideWidth': '282',
+	    'minSlides': 2,
+	    'maxSlides': 3,
+	    'moveSlides': 1,
+		})
+		
+		
+	</script>
+	
+	
+</html>

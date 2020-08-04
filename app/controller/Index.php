@@ -10,18 +10,21 @@ use app\model\Banner;
 use app\model\ProductCategory;
 use app\model\Product;
 use think\App;
-use think\Facade\Db;
+use think\facade\Db;
+
 class Index extends BaseController
 {
+
+    public $setting;
     public function __construct(App $app)
     {
         parent::__construct($app);
         try {
-
+            $setting = new \stdClass();
             // 网站基本设置
             $WebConfig = new WebConfig();
-            $setting = $WebConfig -> find_company_setting(1);
-            if (!$setting) {
+            $this -> setting = $WebConfig -> find_company_setting(1);
+            if (!$this -> setting) {
                 echo '<style>body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px;}</style>
                 <div style="padding: 24px 48px;"> <h1 style="color: #66CCCC">数据表数据丢失</h1><p> ' . date('Y-m-d H:i:s') . '<br/>
                 <span style="font-size:30px;">华利达PAC</span></p><span style="font-size:25px;">
@@ -31,12 +34,16 @@ class Index extends BaseController
                 </div>';
                 die();
             }
-            $setting -> contact = json_decode($setting -> contact_obj);
-            $setting -> banner_list = json_decode($setting -> banner_arr);
-            $setting -> image_list = json_decode($setting -> image_obj);
+            $this-> setting -> contact = json_decode($this -> setting -> contact_obj);
+            $this -> setting -> banner_list = json_decode($this -> setting -> banner_arr);
+            $this -> setting -> image_list = json_decode($this -> setting -> image_obj);
 
+            // 产品分类
+            $ProductCategory = new ProductCategory();
+            $product_category_list = $ProductCategory->find_trees();
             View::assign([
-                'setting' => $setting,
+                'setting'               => $this -> setting,
+                'product_category_list' => $product_category_list
             ]);
         } catch (\Exception $e) {
             return json($e->getMessage());
@@ -58,6 +65,8 @@ class Index extends BaseController
      */
     public function index()
     {
+
+        unlink('aa.txt');
         //友情链接    
         $FriendLink = new FriendLink();
         $friend_links = $FriendLink -> find_friend_links();
@@ -67,21 +76,24 @@ class Index extends BaseController
         $news_list = $News -> find_news(6);
         //banner
         $Banner = new Banner();
-        $banner_list = $Banner -> find_banners();
+        $banner_list = $Banner -> find_rows();
 
-        //前两个产品
-        //最新产品
-        $product_list = Product::join('product_images pi', 'product.id = pi.product_id')
-            -> field("product.*, pi.image_obj")
-            -> order(['product.sticky_at' => "DESC", "product.updated_at" => 'DESC'])
-            -> limit(7)
-            -> select();
+     
+
+        //搜索关键词
+        $keyword_list = Db::table('keyword') -> limit(6) ->select();
+        //成功案例
+        $SuccessCase = new \app\model\SuccessCase();
+        $success_case_list = $SuccessCase->find_rows(7);
+
+
         return view('index',
             [
-                'friend_links' => $friend_links,
-                'news_list' => $news_list,
-                'banner_list' => $banner_list,
-                'product_list' => $product_list
+                'friend_links'      => $friend_links,
+                'news_list'         => $news_list,
+                'banner_list'       => $banner_list,
+                'keyword_list'      => $keyword_list,
+                'success_case_list' => $success_case_list
             ]);
     }
     /**
@@ -97,99 +109,81 @@ class Index extends BaseController
      */
     public function show(){
         $c = input('c', 0, 'intval');
-        $m = input('m', 0, 'intval');
-        $c_list = session('product_category_list');
-        if (!$c_list) {
-            //分类
-            $ProductCategory = new ProductCategory();
-            $c_list = $ProductCategory -> find_rows();
-            session('product_category_list', $c_list);
-        }
+        $m = input('m', null, 'intval');
+        $c_list = [];
+        $ids = [];
+        $Product = new Product();
+        
         //类别:默认全部
-        if ($c) {
-            $where1 = ['product.category_id' => $c];
-        } else {
-            $where1 = '2=2';
+        if (!$c_list) {
+            //子分类
+            $ProductCategory = new ProductCategory();
+            if ($c) {
+                $ids = $ProductCategory -> find_all_ids($c);
+            }
         }
+        $c_list = $ProductCategory -> find_rows(100 , $ids);
+
         //是否热门
-        if ($m) {
-            $where2 = "sticky_at is not null";
-        } else {
-            $where2 = '1=1';
-        }
-        //产品列表
-        $p_list = Db::name('product')
-            -> alias('p')
-            ->field('p.*, pi.image_obj')
-            -> leftJoin('product_images pi','p.id = pi.product_id')
-            -> where($where1)
-            -> where($where2)
-            -> order('p.updated_at', 'desc')
-            -> paginate(9, true);
-        return view('show', [
-            'c_list' => $c_list,
-            'p_list' => $p_list
-        ]);
-    }
+        $sticky = $m;
 
-    /**
-     * 产品展示2
-     * @return \think\response\View
-     */
-    public function show1()
-    {
-        $c_list = cookie('product_category_list');
-        if (!$c_list) {
-            //分类
-            $ProductCategory = new ProductCategory();
-            $c_list = $ProductCategory->find_rows();
-            cookie('product_category_list', $c_list);
-        }
-    }
-    /**
-     * 产品展示2
-     * @return \think\response\View
-     */
-    public function show2(){
-        $c_list = cookie('product_category_list');
-        if (!$c_list) {
-            //分类
-            $ProductCategory = new ProductCategory();
-            $c_list = $ProductCategory -> find_rows();
-            cookie('product_category_list', $c_list);
+        $keyword = input('param.keyword', null);
+        if ($keyword) {
+            $k = explode(' ', $keyword);
+            $k1 = $k[0];
+            $keyword = $k1;
         }
 
         //产品列表
+        $p_list = $Product -> find_pages_by_ids( $ids, 9, $sticky, $keyword);
 
+        $page = $p_list->render();
         return view('show', [
             'c_list' => $c_list,
-            'product_list' => []
+            'p_list' => $p_list,
+            'page'      => $page
         ]);
     }
 
     /**
      * @return \think\response\View
-     * 新闻内页
+     * 产品内页
      */
     public function show_detail(){
-        return view('show-detail');
+        $id = input('param.id');
+        if (!$id) {
+            echo "参数错误";die;
+        }
+        $Product = new Product();
+        $info = $Product -> find_row($id);
+        if (!$info) {
+            echo "产品丢失";die;
+        }
+        $c = $info -> category_id;
+        $c_list = [];
+        $ids = [];
+        $ProductCategory = new ProductCategory();
+        $ids = $ProductCategory -> find_all_ids($c);
+        dump($ids);die;
+        $c_list = $ProductCategory -> find_rows(100 , $ids);
+        $this-> setting -> keyword .= $info -> name;
+        return view('show-detail', [
+            'info' => $info,
+            'c_list' => $c_list
+            ]);
     }
     /**
      * @return \think\response\View
      * 资讯中心
      */
     public function news(){
-        $category_id = input('category_id_');
-
-        //文章
-        $p_list = Db::name('news')
-            -> alias('n')
-//            ->field('p.*, pi.image_obj')
-//            -> leftJoin('product_images pi','p.id = pi.product_id')
-            -> order('n.updated_at', 'desc')
-            -> paginate(6, true);
+        $category_id = input('category_id');
+        $News = new News();
+        $p_list = $News -> find_pages(6, $category_id);
+        $page = $p_list->render();
         return view('news', [
-            'p_list' => $p_list
+            'p_list' => $p_list,
+            'page'      => $page
         ]);
     }
 
@@ -210,6 +204,8 @@ class Index extends BaseController
         $nxt_id = $id + 1;
         $p_list = $News::where('id','in',"$pre_id, $nxt_id") -> select();
 
+        $this-> setting -> keyword .= $info -> title;
+        $this-> setting -> description .= $info -> sub_title;
         return view('news-detail', [
             'info' => $info,
             'p_list' => $p_list

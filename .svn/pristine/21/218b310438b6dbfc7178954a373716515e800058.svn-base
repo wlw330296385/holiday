@@ -1,0 +1,77 @@
+<?php
+namespace app\controller;
+
+use app\BaseController;
+use think\facade\View;
+use think\App;
+use app\model\WebConfig;
+use think\captcha\facade\Captcha;
+class Login extends BaseController
+{
+    public function __construct(App $app)
+    {
+        parent::__construct($app);
+
+        try {
+
+
+            // 网站基本设置
+            $WebConfig = new WebConfig();
+            $setting = $WebConfig -> find_company_setting(1);
+            if (!$setting) {
+                echo '<style>body{ background: #fff; font-family: "Century Gothic","Microsoft yahei"; color: #333;font-size:18px;}</style>
+                <div style="padding: 24px 48px;"> <h1 style="color: #66CCCC">数据表数据丢失</h1><p> ' . date('Y-m-d H:i:s') . '<br/>
+                <span style="font-size:30px;">华利达PAC</span></p><span style="font-size:25px;">
+                <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=1303274598&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:1303274598:53" alt="点我直接qq联系" title="点我直接qq联系"/>
+                </a>
+                </span>
+                </div>';
+                die();
+            }
+
+            $setting -> contact = json_decode($setting -> contact_obj);
+            $setting -> image_list = json_decode($setting -> image_obj);
+
+            View::assign([
+                'setting' => $setting
+            ]);
+        } catch (\Exception $e) {
+            return json($e->getMessage());
+        }
+    }
+
+    /**
+     * 登陆功能页
+     */
+    public function login() {
+
+        if (request() -> isPost()) {
+            $username = input('param.username', '', 'htmlspecialchars');
+            $password = input('param.password', '', 'htmlspecialchars');
+            $vercode = input('param.vercode', '', 'htmlspecialchars');
+            if( !Captcha::check($vercode) && !env('APP_DEBUG')) {
+            // return "验证码错误";
+                echo "<script>alert('验证码错误')</script>";header("refresh: 0");return ;
+            }
+            $User = new \app\model\User();
+            $row = $User -> find_row($username, $password);
+
+            if (!$row) {
+                echo "<script>alert('账号密码错误')</script>";header("refresh: 0");return ;
+
+            }
+            if (!$row -> is_available) {
+                echo "<script>alert('账号禁止')</script>";header("refresh: 0");return ;
+
+            }
+            //存session, 登陆状态
+            session('user', $username);
+            //跳转
+            return redirect('/admin/index');
+        }
+        return view();
+    }
+
+    public function verify(){    return Captcha::create();}
+
+}
